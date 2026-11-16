@@ -59,14 +59,16 @@
     </div>
   </div>
 
-  <!-- Running Text / Marquee Bar Below Header -->
+  <!-- Smooth Continuous Running Text / Marquee Bar Below Header -->
   <div class="bg-emerald-950 text-white text-xs py-2 px-4 border-t border-emerald-800 flex items-center overflow-hidden shadow-inner">
-    <div class="bg-gold-500 text-emerald-950 px-2.5 py-0.5 rounded-md font-extrabold text-[10px] tracking-widest uppercase shrink-0 mr-3 shadow-sm flex items-center gap-1">
+    <div class="bg-gold-500 text-emerald-950 px-2.5 py-0.5 rounded-md font-extrabold text-[10px] tracking-widest uppercase shrink-0 mr-3 shadow-sm flex items-center gap-1 z-10">
       <span>📢</span> <span>PESAN PANITIA</span>
     </div>
-    <div class="overflow-hidden whitespace-nowrap relative w-full">
-      <div class="inline-block animate-marquee text-emerald-100 font-medium tracking-wide">
-        Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup
+    <div class="overflow-hidden w-full relative flex">
+      <div class="animate-marquee-smooth whitespace-nowrap flex items-center gap-8 text-emerald-100 font-medium tracking-wide">
+        <span>Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup</span>
+        <span class="text-gold-400">•</span>
+        <span>Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup</span>
       </div>
     </div>
   </div>
@@ -85,16 +87,16 @@
 </header>
 
 <style>
-  @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+  @keyframes marqueeSmooth {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
   }
-  .animate-marquee {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 35s linear infinite;
+  .animate-marquee-smooth {
+    display: flex;
+    width: max-content;
+    animation: marqueeSmooth 45s linear infinite;
   }
-  .animate-marquee:hover {
+  .animate-marquee-smooth:hover {
     animation-play-state: paused;
   }
 </style>

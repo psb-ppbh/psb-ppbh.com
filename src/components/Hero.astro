@@ -2,7 +2,7 @@
 import { YAYASAN_INFO } from '../data/psbData';
 ---
 
-<section class="relative overflow-hidden bg-emerald-950 text-white pt-12 pb-24 lg:pt-20 lg:pb-32">
+<section class="relative overflow-hidden bg-emerald-950 text-white pt-8 pb-20 sm:pt-12 sm:pb-24 lg:pt-20 lg:pb-32">
 
   <!-- Cinematic Photo Background with Soft Gradient Layer -->
   <div class="absolute inset-0 z-0">
@@ -17,15 +17,15 @@ import { YAYASAN_INFO } from '../data/psbData';
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
       <!-- Headline & Main Copywriting -->
-      <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+      <div class="lg:col-span-7 space-y-5 sm:space-y-7 text-center lg:text-left">
 
-        <!-- Official Heritage Badge -->
-        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-900/80 border border-gold-400/40 text-gold-300 text-xs sm:text-sm font-extrabold shadow-lg backdrop-blur-md">
-          <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
-          <span>Pendaftaran Resmi TP. {YAYASAN_INFO.tahunAjaran} • Dibuka {YAYASAN_INFO.tglBukaPendaftaran}</span>
+        <!-- Official Heritage Badge (Exact Redaksi Text) -->
+        <div class="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900/90 border border-gold-400/50 text-gold-300 text-[11px] sm:text-sm font-extrabold shadow-lg backdrop-blur-md max-w-full">
+          <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse shrink-0"></span>
+          <span class="truncate">Dibuka Pendaftaran Resmi TP. {YAYASAN_INFO.tahunAjaran} • 01 Maret 2027</span>
         </div>
 
         <!-- Main Headline with Serif Typography -->
@@ -36,34 +36,34 @@ import { YAYASAN_INFO } from '../data/psbData';
           </span>
         </h1>
 
-        <p class="text-base sm:text-lg text-emerald-100 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+        <p class="text-xs sm:text-base lg:text-lg text-emerald-100 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
           Selamat datang di portal pemasaran dan pendaftaran terpadu <strong class="text-gold-300">{YAYASAN_INFO.nama} Mojogeneng</strong>. Mendidik generasi Rabbani berakhlak mulia sejak tahun 1948 dengan perpaduan kurikulum formal dan khazanah keilmuan salaf.
         </p>
 
         <!-- Feature Badges -->
-        <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-1">
-          <div class="px-4 py-2 rounded-2xl bg-emerald-900/60 border border-emerald-700/80 text-xs font-semibold text-emerald-100 backdrop-blur-md flex items-center gap-2">
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 pt-1">
+          <div class="px-3.5 py-1.5 rounded-2xl bg-emerald-900/60 border border-emerald-700/80 text-[11px] sm:text-xs font-semibold text-emerald-100 backdrop-blur-md flex items-center gap-1.5">
             <span class="text-gold-400 font-bold">✓</span> 5 Lembaga Formal Integrated
           </div>
-          <div class="px-4 py-2 rounded-2xl bg-emerald-900/60 border border-emerald-700/80 text-xs font-semibold text-emerald-100 backdrop-blur-md flex items-center gap-2">
+          <div class="px-3.5 py-1.5 rounded-2xl bg-emerald-900/60 border border-emerald-700/80 text-[11px] sm:text-xs font-semibold text-emerald-100 backdrop-blur-md flex items-center gap-1.5">
             <span class="text-gold-400 font-bold">✓</span> 14 Komplek Asrama Putra & Putri
           </div>
-          <div class="px-4 py-2 rounded-2xl bg-emerald-900/60 border border-emerald-700/80 text-xs font-semibold text-emerald-100 backdrop-blur-md flex items-center gap-2">
+          <div class="px-3.5 py-1.5 rounded-2xl bg-emerald-900/60 border border-emerald-700/80 text-[11px] sm:text-xs font-semibold text-emerald-100 backdrop-blur-md flex items-center gap-1.5">
             <span class="text-gold-400 font-bold">✓</span> Program Tahfidz & Kitab Salaf
           </div>
         </div>
 
         <!-- Action CTA Buttons -->
-        <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+        <div class="pt-2 sm:pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
           <a
             href="#daftar"
-            class="w-full sm:w-auto bg-gradient-to-r from-gold-400 via-gold-500 to-amber-500 hover:from-gold-500 hover:to-amber-600 text-emerald-950 font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl hover:shadow-gold-500/25 transition-all transform hover:-translate-y-1 text-center"
+            class="w-full sm:w-auto bg-gradient-to-r from-gold-400 via-gold-500 to-amber-500 hover:from-gold-500 hover:to-amber-600 text-emerald-950 font-extrabold text-sm sm:text-base px-8 py-3.5 sm:py-4 rounded-2xl shadow-xl hover:shadow-gold-500/25 transition-all transform hover:-translate-y-1 text-center"
           >
             Daftar PSB Online Sekarang
           </a>
           <a
             href="#syarat"
-            class="w-full sm:w-auto bg-emerald-900/80 hover:bg-emerald-900 border border-emerald-600/80 text-white font-bold text-base px-6 py-4 rounded-2xl backdrop-blur-md transition-all text-center flex items-center justify-center gap-2"
+            class="w-full sm:w-auto bg-emerald-900/80 hover:bg-emerald-900 border border-emerald-600/80 text-white font-bold text-sm sm:text-base px-6 py-3.5 sm:py-4 rounded-2xl backdrop-blur-md transition-all text-center flex items-center justify-center gap-2"
           >
             <span>Syarat & Jadwal Seleksi</span>
             <span class="text-gold-300">➔</span>
@@ -71,7 +71,7 @@ import { YAYASAN_INFO } from '../data/psbData';
         </div>
 
         <!-- Caretakers Quote Brief -->
-        <div class="pt-6 border-t border-emerald-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-emerald-200">
+        <div class="pt-4 sm:pt-6 border-t border-emerald-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-[11px] sm:text-xs text-emerald-200">
           <div><strong class="text-gold-300">Pengasuh:</strong> {YAYASAN_INFO.pengasuh.join(' & ')}</div>
           <span class="text-emerald-700">•</span>
           <div><strong class="text-gold-300">Pendiri:</strong> {YAYASAN_INFO.pendiri}</div>
@@ -87,11 +87,11 @@ import { YAYASAN_INFO } from '../data/psbData';
           <div class="absolute -inset-3 bg-gradient-to-tr from-gold-400/30 via-emerald-400/20 to-gold-500/30 rounded-[2.5rem] blur-2xl opacity-60"></div>
 
           <!-- Main Glassmorphism Frame -->
-          <div class="relative bg-emerald-950/80 border-2 border-gold-400/50 rounded-[2rem] p-6 shadow-2xl backdrop-blur-xl space-y-5 text-center">
+          <div class="relative bg-emerald-950/80 border-2 border-gold-400/50 rounded-[2rem] p-5 sm:p-6 shadow-2xl backdrop-blur-xl space-y-4 text-center">
 
             <!-- Logo Emblem Banner -->
-            <div class="flex items-center justify-center gap-3 bg-emerald-900/90 p-4 rounded-2xl border border-emerald-700 shadow-inner">
-              <img src={YAYASAN_INFO.logoUrl} alt="Logo Official PPBH" class="w-12 h-12 object-contain" />
+            <div class="flex items-center justify-center gap-3 bg-emerald-900/90 p-3.5 rounded-2xl border border-emerald-700 shadow-inner">
+              <img src={YAYASAN_INFO.logoUrl} alt="Logo Official PPBH" class="w-10 h-10 object-contain shrink-0" />
               <div class="text-left">
                 <div class="text-xs font-bold text-white font-serif">{YAYASAN_INFO.nama}</div>
                 <div class="text-[10px] text-gold-300 font-medium">Mojogeneng, Jatirejo, Mojokerto</div>
@@ -99,13 +99,13 @@ import { YAYASAN_INFO } from '../data/psbData';
             </div>
 
             <!-- Real Photo Highlight -->
-            <div class="relative w-full h-56 rounded-2xl overflow-hidden border border-emerald-700 shadow-md group">
+            <div class="relative w-full h-48 sm:h-56 rounded-2xl overflow-hidden border border-emerald-700 shadow-md group">
               <img
                 src={YAYASAN_INFO.fotoKegiatanUrl}
                 alt="Kegiatan Santri"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-transparent to-transparent flex items-end p-4">
+              <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-transparent to-transparent flex items-end p-3.5">
                 <div class="text-left text-xs font-bold text-white">
                   <span class="text-gold-300 font-mono text-[10px]">TAHUN AJARAN {YAYASAN_INFO.tahunAjaran}</span>
                   <div>Membina Generasi Salafiyah & Kreatif</div>
@@ -117,11 +117,11 @@ import { YAYASAN_INFO } from '../data/psbData';
             <div class="grid grid-cols-2 gap-3 text-left">
               <div class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-700">
                 <div class="text-[10px] text-emerald-300 font-bold uppercase">BIAYA PENDAFTARAN</div>
-                <div class="text-sm font-extrabold text-gold-300">{YAYASAN_INFO.biayaPendaftaran}</div>
+                <div class="text-xs sm:text-sm font-extrabold text-gold-300">{YAYASAN_INFO.biayaPendaftaran}</div>
               </div>
               <div class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-700">
                 <div class="text-[10px] text-emerald-300 font-bold uppercase">PEMBUKAAN</div>
-                <div class="text-sm font-extrabold text-white">{YAYASAN_INFO.tglBukaPendaftaran}</div>
+                <div class="text-xs sm:text-sm font-extrabold text-white">{YAYASAN_INFO.tglBukaPendaftaran}</div>
               </div>
             </div>
 
