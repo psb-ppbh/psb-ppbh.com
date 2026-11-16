@@ -1,0 +1,19 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ArtikelPesantren from '../components/ArtikelPesantren.astro';
+---
+
+<MainLayout
+  title="Warta & Jurnal Artikel Pesantren | PSB PPBH Mojogeneng"
+  description="Kumpulan warta berita, jurnalistic santri, dan artikel keagamaan dari Pondok Pesantren Bidayatul Hidayah Mojogeneng."
+>
+  <div class="bg-emerald-950 text-white py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="px-3.5 py-1 bg-gold-500 text-emerald-950 text-xs font-extrabold rounded-full uppercase">Kabar Pesantren</span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold font-serif text-white mt-3">Jurnal & Warta Bidayatul Hidayah</h1>
+      <p class="text-emerald-200 text-sm mt-2 max-w-xl mx-auto">Informasi kegiatan, artikel ilmiah keagamaan, dan kabar terbaru dari bumi Mojogeneng.</p>
+    </div>
+  </div>
+
+  <ArtikelPesantren />
+</MainLayout>
