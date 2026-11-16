@@ -1,5 +1,4 @@
 ---
-import { YAYASAN_INFO } from '../data/psbData';
 ---
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-emerald-100 text-slate-800 shadow-sm transition-all duration-300">
@@ -9,7 +8,7 @@ import { YAYASAN_INFO } from '../data/psbData';
       <!-- Official Logo & Brand -->
       <a href="#" class="flex items-center gap-3.5 group">
         <div class="relative w-12 h-12 flex items-center justify-center p-1 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border border-emerald-200 shadow-sm group-hover:scale-105 transition-transform">
-          <img src={YAYASAN_INFO.logoUrl} alt="Logo PPBH" class="w-full h-full object-contain" />
+          <img src="/logo-ppbh.png" alt="Logo PPBH" class="w-full h-full object-contain" />
         </div>
         <div>
           <div class="text-[10px] font-extrabold text-gold-600 tracking-wider uppercase">Yayasan Ponpes</div>
@@ -21,11 +20,13 @@ import { YAYASAN_INFO } from '../data/psbData';
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
         <a href="#profil" class="hover:text-emerald-900 transition-colors">Profil</a>
+        <a href="#linimasa" class="hover:text-emerald-900 transition-colors">Lini Masa (1948)</a>
         <a href="#lembaga" class="hover:text-emerald-900 transition-colors">5 Lembaga</a>
         <a href="#komplek" class="hover:text-emerald-900 transition-colors">14 Komplek</a>
         <a href="#syarat" class="hover:text-emerald-900 transition-colors">Syarat & Alur</a>
+        <a href="#artikel" class="hover:text-emerald-900 transition-colors">Warta Artikel</a>
         <a href="#forum" class="hover:text-emerald-900 transition-colors flex items-center gap-1.5">
           <span>Forum Q&A</span>
           <span class="bg-emerald-900 text-gold-300 text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-sm">Live</span>
@@ -61,9 +62,11 @@ import { YAYASAN_INFO } from '../data/psbData';
   <!-- Mobile Drawer Menu -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-emerald-100 px-6 pt-2 pb-6 space-y-3 shadow-lg">
     <a href="#profil" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Profil Pesantren</a>
+    <a href="#linimasa" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Lini Masa History (1948)</a>
     <a href="#lembaga" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">5 Lembaga Formal</a>
     <a href="#komplek" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">14 Komplek Asrama</a>
     <a href="#syarat" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Syarat & Alur Pendaftaran</a>
+    <a href="#artikel" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Warta & Artikel Pesantren</a>
     <a href="#forum" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Forum Diskusi Q&A</a>
     <a href="#daftar" class="block bg-emerald-900 text-white text-center font-bold py-3.5 rounded-2xl mt-4 border border-gold-400/40">Daftar PSB 2027/2028 Sekarang</a>
   </div>

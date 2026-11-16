@@ -1,0 +1,52 @@
+---
+import { ARTIKEL_PESANTREN } from '../data/psbData';
+---
+
+<section id="artikel" class="py-20 bg-white text-slate-800 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-900 border border-emerald-200 rounded-full text-xs font-extrabold uppercase tracking-widest">
+        Warta & Kabar Pesantren
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 font-serif">
+        Jurnal & Artikel Bidayatul Hidayah
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base">
+        Ragam wawasan, kabar pendidikan, dan kisah inspiratif seputar dinamika kehidupan santri di Mojogeneng.
+      </p>
+      <div class="w-20 h-1.5 bg-gold-500 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Article Cards Grid -->
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {ARTIKEL_PESANTREN.map(artikel => (
+        <article class="bg-light-soft border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-emerald-700 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="px-3 py-1 bg-emerald-100 text-emerald-900 font-extrabold rounded-lg">
+                {artikel.kategori}
+              </span>
+              <span class="text-slate-400 font-mono text-[11px]">{artikel.bacaMenit} min read</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-emerald-950 font-serif leading-snug hover:text-emerald-800 transition-colors cursor-pointer">
+              {artikel.judul}
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {artikel.ringkasan}
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500">
+            <span>✍️ {artikel.penulis}</span>
+            <span class="font-mono text-[11px]">{artikel.tanggal}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

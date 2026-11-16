@@ -31,6 +31,23 @@ export interface JadwalSeleksi {
   };
 }
 
+export interface LiniMasaHistory {
+  tahun: string;
+  judul: string;
+  deskripsi: string;
+  badge?: string;
+}
+
+export interface ArtikelPesantren {
+  id: string;
+  judul: string;
+  kategori: string;
+  tanggal: string;
+  ringkasan: string;
+  penulis: string;
+  bacaMenit: number;
+}
+
 export const YAYASAN_INFO = {
   nama: "Yayasan Pondok Pesantren Bidayatul Hidayah",
   singkatan: "PPBH",
@@ -90,8 +107,8 @@ export const LEMBAGA_FORMAL: LembagaFormal[] = [
     jenjang: 'SMK',
     nama: 'SMK Bidayatul Hidayah',
     kepalaSekolah: 'Achmad Basyro, S.Pd.',
-    jurusan: ['Teknik Komputer dan Jaringan (TKJ)', 'Desain Komunikasi Visual (DKV)'],
-    deskripsi: 'Sekolah Menengah Kejuruan berwawasan teknologi modern dan kewirausahaan bernuansa pesantren.',
+    jurusan: ['Desain Komunikasi Visual (DKV)'],
+    deskripsi: 'Sekolah Menengah Kejuruan berwawasan kreatif multimedia, desain komunikasi visual, dan kewirausahaan bernuansa pesantren.',
     icon: 'Laptop',
     domainUrl: 'https://smkbidayatulhidayah.sch.id',
   },
@@ -119,6 +136,69 @@ export const KOMPLEK_ASRAMA: KomplekAsrama[] = [
   { id: 12, nama: 'Asrama Hidayatus Sibyan', kategori: 'Umum', deskripsi: 'Komplek khusus pembinaan santri usia dini/anak-anak.' },
   { id: 13, nama: 'Asrama Raudhatul Hikmah', kategori: 'Putri', deskripsi: 'Komplek putri pengembangan kajian ilmu-ilmu keislaman.' },
   { id: 14, nama: 'Asrama Al Barokah', kategori: 'Umum', deskripsi: 'Komplek terpadu pendukung kegiatan akademik dan ekstrakurikuler.' },
+];
+
+export const LINI_MASA_HISTORY: LiniMasaHistory[] = [
+  {
+    tahun: '1948',
+    judul: 'Pancangan Perintis di Mojogeneng',
+    deskripsi: 'Ditempuh dan didirikan oleh KH. Moh. Yahdi Mathlab (Alm), seorang ulama alim & Hafidh Al-Qur\'an sebagai pusat pengajaran Al-Qur\'an dan kitab salaf di Desa Mojogeneng, Jatirejo, Mojokerto.',
+    badge: 'Awal Pendirian'
+  },
+  {
+    tahun: '1970-an',
+    judul: 'Peletakan Fondasi Madin & Salafiyah',
+    deskripsi: 'Pengembangan struktur Madrasah Diniyah Tuhfatul Mubtadi\'in serta pembentukan sistem pendidikan berasrama terstruktur bagi santri putra dan putri.',
+    badge: 'Tradisi Salaf'
+  },
+  {
+    tahun: '1990-an',
+    judul: 'Pendidikan Formal Integrated (MI, MTs, MA, RA)',
+    deskripsi: 'Integrasi kurikulum kementerian nasional dengan pendirian MI Salafiyah, MTs Salafiyah, MA Bidayatul Hidayah, dan RA Tsamrotut Tufulliyah.',
+    badge: 'Integrasi Formal'
+  },
+  {
+    tahun: '2010-an',
+    judul: 'Pendirian SMK DKV & Perluasan 14 Komplek',
+    deskripsi: 'Pendirian SMK Bidayatul Hidayah konsentrasi Desain Komunikasi Visual (DKV) dan perluasan hunian santri hingga mencapai 14 Komplek Asrama.',
+    badge: 'Era Kreatif'
+  },
+  {
+    tahun: '2027',
+    judul: 'Peluncuran PSB Parent Gateway Terpadu',
+    deskripsi: 'Penerapan sistem pendaftaran 1 pintu digital untuk seluruh 14 komplek dan 5 lembaga formal, terhubung langsung dengan aplikasi mobile admin panitia.',
+    badge: 'Era Digital 2027'
+  }
+];
+
+export const ARTIKEL_PESANTREN: ArtikelPesantren[] = [
+  {
+    id: '1',
+    judul: 'Menjaga Keseimbangan Tradisi Salafiyah dan Kreativitas Digital di PPBH Mojogeneng',
+    kategori: 'Pendidikan Pesantren',
+    tanggal: '10 Februari 2027',
+    ringkasan: 'Bagaimana santri Bidayatul Hidayah tetap mendalami kajian Kitab Kuning salafiyah sekaligus menguasai keahlian Desain Komunikasi Visual (DKV) di era modern.',
+    penulis: 'Humas PPBH Mojogeneng',
+    bacaMenit: 4
+  },
+  {
+    id: '2',
+    judul: 'Mengapa Pembinaan Berbasis 14 Komplek Asrama Membentuk Kemandirian & Akhlak Santri',
+    kategori: 'Kehidupan Santri',
+    tanggal: '05 Februari 2027',
+    ringkasan: 'Sistem pengasuhan terpisah putra dan putri dalam 14 komplek asrama menciptakan lingkungan islami, sejuk, dan mendukung kedisiplinan ibadah santri.',
+    penulis: 'Redaksi Bidayatul Hidayah',
+    bacaMenit: 3
+  },
+  {
+    id: '3',
+    judul: 'Panduan Pendaftaran TP. 2027/2028: Langkah Mudah Pendaftaran Online Single Gateway',
+    kategori: 'Informasi PSB',
+    tanggal: '01 Januari 2027',
+    ringkasan: 'Penjelasan lengkap alur pendaftaran 1 pintu, simulasi biaya pendaftaran Rp 200.000, serta panduan memilih 5 jenjang sekolah formal di PPBH.',
+    penulis: 'Panitia PSB 2027',
+    bacaMenit: 5
+  }
 ];
 
 export const KEGIATAN_SANTRI = [
