@@ -64,11 +64,16 @@
     <div class="bg-gold-500 text-emerald-950 px-2.5 py-0.5 rounded-md font-extrabold text-[10px] tracking-widest uppercase shrink-0 mr-3 shadow-sm flex items-center gap-1 z-10">
       <span>📢</span> <span>PESAN PANITIA</span>
     </div>
-    <div class="overflow-hidden w-full relative flex">
-      <div class="animate-marquee-smooth whitespace-nowrap flex items-center gap-8 text-emerald-100 font-medium tracking-wide">
-        <span>Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup</span>
-        <span class="text-gold-400">•</span>
-        <span>Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup</span>
+    <div class="overflow-hidden w-full relative">
+      <div class="flex w-max animate-marquee-seamless">
+        <div class="flex items-center gap-6 pr-6 shrink-0 text-emerald-100 font-medium tracking-wide">
+          <span>Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup</span>
+          <span class="text-gold-400 font-bold">•</span>
+        </div>
+        <div class="flex items-center gap-6 pr-6 shrink-0 text-emerald-100 font-medium tracking-wide">
+          <span>Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup</span>
+          <span class="text-gold-400 font-bold">•</span>
+        </div>
       </div>
     </div>
   </div>
@@ -87,16 +92,17 @@
 </header>
 
 <style>
-  @keyframes marqueeSmooth {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+  @keyframes marqueeSeamless {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
   }
-  .animate-marquee-smooth {
+  .animate-marquee-seamless {
     display: flex;
     width: max-content;
-    animation: marqueeSmooth 45s linear infinite;
+    will-change: transform;
+    animation: marqueeSeamless 65s linear infinite;
   }
-  .animate-marquee-smooth:hover {
+  .animate-marquee-seamless:hover {
     animation-play-state: paused;
   }
 </style>
