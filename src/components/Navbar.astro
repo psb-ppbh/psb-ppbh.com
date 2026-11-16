@@ -5,17 +5,17 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
 
-      <!-- Official Logo & Brand -->
+      <!-- Official Logo & Brand Redaksi Specific Header -->
       <a href="#" class="flex items-center gap-3.5 group">
-        <div class="relative w-12 h-12 flex items-center justify-center p-1 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border border-emerald-200 shadow-sm group-hover:scale-105 transition-transform">
+        <div class="relative w-12 h-12 flex items-center justify-center p-1 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border border-emerald-200 shadow-sm group-hover:scale-105 transition-transform shrink-0">
           <img src="/logo-ppbh.png" alt="Logo PPBH" class="w-full h-full object-contain" />
         </div>
         <div>
-          <div class="text-[10px] font-extrabold text-gold-600 tracking-wider uppercase">Yayasan Ponpes</div>
-          <div class="text-base sm:text-lg font-extrabold tracking-tight text-emerald-950 group-hover:text-emerald-800 transition-colors font-serif">
-            Bidayatul Hidayah
+          <div class="text-[10px] font-extrabold text-gold-600 tracking-wider uppercase leading-snug">Yayasan Ponpes Bidayatul Hidayah</div>
+          <div class="text-base sm:text-lg font-extrabold tracking-tight text-emerald-950 group-hover:text-emerald-800 transition-colors font-serif leading-tight">
+            PSB-PPBH
           </div>
-          <div class="text-[10px] text-slate-500 font-medium">Mojogeneng - Jatirejo - Mojokerto</div>
+          <div class="text-[10px] text-slate-500 font-medium leading-snug">Mojogeneng - Jatirejo - Mojokerto</div>
         </div>
       </a>
 
@@ -59,6 +59,18 @@
     </div>
   </div>
 
+  <!-- Running Text / Marquee Bar Below Header -->
+  <div class="bg-emerald-950 text-white text-xs py-2 px-4 border-t border-emerald-800 flex items-center overflow-hidden shadow-inner">
+    <div class="bg-gold-500 text-emerald-950 px-2.5 py-0.5 rounded-md font-extrabold text-[10px] tracking-widest uppercase shrink-0 mr-3 shadow-sm flex items-center gap-1">
+      <span>📢</span> <span>PESAN PANITIA</span>
+    </div>
+    <div class="overflow-hidden whitespace-nowrap relative w-full">
+      <div class="inline-block animate-marquee text-emerald-100 font-medium tracking-wide">
+        Mondok ngak bakal nyita waktumu di dunia, Mondok banyak tutorial hidup di dunia & akhirat yang bisa kamu warisi. - Di Mojogeneng kamu ditempa menjadi pewaris yang berakhlakul karimah - Kanjeng Nabi MUHAMMAD SAW. Sang Maestro tutorial telah mewariskan semuanya - Admin hanya mengingatkan buruan daftar sebelum pendaftaran ditutup
+      </div>
+    </div>
+  </div>
+
   <!-- Mobile Drawer Menu -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-emerald-100 px-6 pt-2 pb-6 space-y-3 shadow-lg">
     <a href="#profil" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Profil Pesantren</a>
@@ -71,6 +83,21 @@
     <a href="#daftar" class="block bg-emerald-900 text-white text-center font-bold py-3.5 rounded-2xl mt-4 border border-gold-400/40">Daftar PSB 2027/2028 Sekarang</a>
   </div>
 </header>
+
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .animate-marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 35s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+</style>
 
 <script>
   const btn = document.getElementById('mobile-menu-btn');

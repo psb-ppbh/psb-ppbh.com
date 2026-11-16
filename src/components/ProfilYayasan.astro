@@ -2,34 +2,34 @@
 import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } from '../data/psbData';
 ---
 
-<section id="profil" class="py-20 bg-white text-slate-800 relative">
+<section id="profil" class="py-16 sm:py-20 bg-white text-slate-800 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto space-y-4">
+    <div class="text-center max-w-3xl mx-auto space-y-3">
       <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-900 rounded-full text-xs font-extrabold uppercase tracking-widest border border-emerald-200">
         Sejarah & Perjalanan
       </span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 font-serif">
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-emerald-950 font-serif">
         Profil Yayasan Bidayatul Hidayah Mojogeneng
       </h2>
-      <p class="text-slate-600 text-sm sm:text-base">
+      <p class="text-slate-600 text-xs sm:text-base">
         Didirikan sejak tahun 1948 di Desa Mojogeneng, Jatirejo, Mojokerto. Membina ribuan alumni berkualitas yang tersebar di Nusantara.
       </p>
-      <div class="w-20 h-1.5 bg-gold-500 mx-auto rounded-full"></div>
+      <div class="w-16 h-1 bg-gold-500 mx-auto rounded-full"></div>
     </div>
 
     <!-- Sejarah Narrative & Real Photo Gallery Grid -->
-    <div class="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+    <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
       <!-- Sejarah Narrative Card -->
-      <div class="lg:col-span-7 bg-light-soft p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-        <div class="space-y-4 text-slate-700 leading-relaxed text-base">
+      <div class="lg:col-span-7 bg-light-soft p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div class="space-y-4 text-slate-700 leading-relaxed text-xs sm:text-base">
           <div class="flex items-center gap-3 mb-2">
-            <img src={YAYASAN_INFO.logoUrl} alt="Logo" class="w-10 h-10 object-contain" />
+            <img src={YAYASAN_INFO.logoUrl} alt="Logo" class="w-10 h-10 object-contain shrink-0" />
             <div>
-              <div class="text-xs text-gold-600 font-bold uppercase tracking-wider">Berdiri Sejak 1948</div>
-              <div class="text-lg font-bold text-emerald-950 font-serif">Sejarah Pendirian Pesantren</div>
+              <div class="text-[10px] text-gold-600 font-extrabold uppercase tracking-wider">Berdiri Sejak 1948</div>
+              <div class="text-base sm:text-lg font-bold text-emerald-950 font-serif">Sejarah Pendirian Pesantren</div>
             </div>
           </div>
 
@@ -37,19 +37,19 @@ import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } fr
             <strong>Yayasan Pondok Pesantren Bidayatul Hidayah</strong> merupakan Pondok Pesantren yang didirikan oleh seorang ulama alim dan Hafidh Al-Qur'an yaitu <strong class="text-emerald-900">{YAYASAN_INFO.pendiri}</strong> di Desa Mojogeneng, Kecamatan Jatirejo, Kabupaten Mojokerto, Jawa Timur pada tahun <strong>1948</strong>.
           </p>
           <p>
-            Saat ini Pondok Pesantren Bidayatul Hidayah diasuh oleh <strong class="text-emerald-900">KH. Agus Salim Yahdi</strong> (Putra dari KH. Moh. Yahdi Mathlab) bersama <strong class="text-emerald-900">Kiai Nur Hasan</strong>. Berbekal ilmu dan keikhlasan beliau di bidang ilmu agama, Yayasan Ponpes Bidayatul Hidayah mengalami perkembangan pesat.
+            Saat ini Pondok Pesantren Bidayatul Hidayah diasuh oleh <strong class="text-emerald-900">KH. Agus Salim Yahdi</strong> (Putra dari KH. Moh. Yahdi Mathlab) bersama <strong class="text-emerald-900">Kiai Nur Hasan</strong>. Berbekal ilmu dan keikhlasan beliau di bidang ilmu agama, Pesantren Bidayatul Hidayah mengalami perkembangan pesat.
           </p>
-          <div class="p-4 bg-white rounded-2xl border-l-4 border-emerald-800 text-sm text-emerald-900 font-semibold shadow-sm">
+          <div class="p-3.5 bg-white rounded-2xl border-l-4 border-emerald-800 text-xs sm:text-sm text-emerald-900 font-semibold shadow-sm">
             Saat ini Pon Pes Bidayatul Hidayah mengelola <strong>14 Komplek Asrama</strong> serta unit pendidikan formal dan non-formal yang saling terintegrasi.
           </div>
         </div>
 
         <!-- Non-Formal Institutions -->
-        <div class="pt-6 border-t border-slate-200 mt-6">
-          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Lembaga Non-Formal Pesantren:</div>
+        <div class="pt-5 border-t border-slate-200 mt-5">
+          <div class="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider mb-2.5">Lembaga Non-Formal Pesantren:</div>
           <div class="flex flex-wrap gap-2">
             {LEMBAGA_NON_FORMAL.map(item => (
-              <span class="px-3.5 py-1.5 bg-white text-emerald-950 text-xs font-bold rounded-xl border border-emerald-200 shadow-sm">
+              <span class="px-3 py-1 bg-white text-emerald-950 text-[11px] font-bold rounded-xl border border-emerald-200 shadow-sm">
                 {item}
               </span>
             ))}
@@ -61,34 +61,34 @@ import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } fr
       <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
 
         <!-- Real Photo Frame -->
-        <div class="relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 group h-64 sm:h-72">
+        <div class="relative rounded-3xl overflow-hidden shadow-md border border-slate-200 group h-56 sm:h-72">
           <img
             src={YAYASAN_INFO.fotoKegiatanUrl}
             alt="Kegiatan Santri Bidayatul Hidayah"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/85 via-emerald-950/20 to-transparent flex items-end p-6">
+          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/85 via-emerald-950/20 to-transparent flex items-end p-5">
             <div class="text-white space-y-1">
-              <span class="px-2.5 py-1 bg-gold-500 text-emerald-950 text-[10px] font-extrabold rounded-md uppercase">
+              <span class="px-2.5 py-0.5 bg-gold-500 text-emerald-950 text-[10px] font-extrabold rounded uppercase">
                 Suasana Pesantren
               </span>
-              <h3 class="text-base font-bold font-serif">Kajian & Pembinaan Akhlak Santri</h3>
-              <p class="text-xs text-emerald-200">Mojogeneng, Jatirejo, Mojokerto</p>
+              <h3 class="text-sm sm:text-base font-bold font-serif">Kajian & Pembinaan Akhlak Santri</h3>
+              <p class="text-[11px] text-emerald-200">Mojogeneng, Jatirejo, Mojokerto</p>
             </div>
           </div>
         </div>
 
         <!-- Pengasuh Brief Box -->
-        <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-gold-400/40 space-y-4">
-          <div class="text-xs text-gold-300 font-bold uppercase tracking-widest">Amanah Kepengasuhan</div>
-          <div class="space-y-3">
-            <div class="bg-emerald-900/90 p-3.5 rounded-2xl border border-emerald-700">
-              <div class="text-[10px] text-emerald-300 uppercase">PENDIRI PONPES (1948)</div>
-              <div class="text-sm font-bold text-gold-300">{YAYASAN_INFO.pendiri}</div>
+        <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-gold-400/40 space-y-3">
+          <div class="text-[10px] text-gold-300 font-extrabold uppercase tracking-widest">Amanah Kepengasuhan</div>
+          <div class="space-y-2.5">
+            <div class="bg-emerald-900/90 p-3 rounded-2xl border border-emerald-700">
+              <div class="text-[9px] text-emerald-300 uppercase font-bold">PENDIRI PONPES (1948)</div>
+              <div class="text-xs sm:text-sm font-bold text-gold-300">{YAYASAN_INFO.pendiri}</div>
             </div>
-            <div class="bg-emerald-900/90 p-3.5 rounded-2xl border border-emerald-700">
-              <div class="text-[10px] text-emerald-300 uppercase">PENGASUH PONPES</div>
-              <div class="text-sm font-bold text-white">KH. Agus Salim Yahdi & Kiai Nur Hasan</div>
+            <div class="bg-emerald-900/90 p-3 rounded-2xl border border-emerald-700">
+              <div class="text-[9px] text-emerald-300 uppercase font-bold">PENGASUH PONPES</div>
+              <div class="text-xs sm:text-sm font-bold text-white">KH. Agus Salim Yahdi & Kiai Nur Hasan</div>
             </div>
           </div>
         </div>
@@ -97,42 +97,46 @@ import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } fr
 
     </div>
 
-    <!-- Activities & Extracurriculars Grid -->
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Compact HP-Friendly Grid for Activities & Extracurriculars -->
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 
-      <!-- Kegiatan Santri Harian -->
-      <div class="bg-light-soft p-8 rounded-3xl border border-slate-200 shadow-sm">
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-10 h-10 rounded-2xl bg-emerald-900 text-gold-300 flex items-center justify-center text-xl font-bold">📖</div>
+      <!-- Kegiatan Santri Harian (2-Column Grid on Mobile) -->
+      <div class="bg-light-soft p-5 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 rounded-xl bg-emerald-900 text-gold-300 flex items-center justify-center text-lg font-bold shrink-0">📖</div>
           <div>
-            <h3 class="text-xl font-bold text-emerald-950 font-serif">Kegiatan Santri Harian</h3>
-            <p class="text-xs text-slate-500">Rutinitas keilmuan & ibadah di pesantren</p>
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-950 font-serif">Kegiatan Santri Harian</h3>
+            <p class="text-[11px] sm:text-xs text-slate-500">Rutinitas keilmuan & ibadah santri</p>
           </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+        <!-- Grid 2-Kolom di HP agar Ringkas & Tidak Memanjang -->
+        <div class="grid grid-cols-2 gap-2.5">
           {KEGIATAN_SANTRI.map(kegiatan => (
-            <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm">
-              <span class="text-emerald-700 font-bold">✓</span>
-              <span>{kegiatan}</span>
+            <div class="flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-slate-800 bg-white p-2.5 sm:p-3.5 rounded-2xl border border-slate-200/80 shadow-sm leading-tight">
+              <span class="text-emerald-700 font-bold shrink-0">✓</span>
+              <span class="truncate">{kegiatan}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Ekstrakurikuler & Pengembangan Bakat -->
-      <div class="bg-light-soft p-8 rounded-3xl border border-slate-200 shadow-sm">
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-10 h-10 rounded-2xl bg-gold-500 text-emerald-950 flex items-center justify-center text-xl font-bold">🏆</div>
+      <!-- Ekstrakurikuler & Bakat (2-Column Grid on Mobile) -->
+      <div class="bg-light-soft p-5 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-9 h-9 rounded-xl bg-gold-500 text-emerald-950 flex items-center justify-center text-lg font-bold shrink-0">🏆</div>
           <div>
-            <h3 class="text-xl font-bold text-emerald-950 font-serif">Ekstrakurikuler & Bakat</h3>
-            <p class="text-xs text-slate-500">Wadah minat, bakat, & seni santri</p>
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-950 font-serif">Ekstrakurikuler & Bakat</h3>
+            <p class="text-[11px] sm:text-xs text-slate-500">Wadah minat, bakat, & seni santri</p>
           </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+        <!-- Grid 2-Kolom di HP agar Ringkas & Tidak Memanjang -->
+        <div class="grid grid-cols-2 gap-2.5">
           {EKSTRAKURIKULER.map(ekstra => (
-            <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm">
-              <span class="text-gold-600 font-bold">★</span>
-              <span>{ekstra}</span>
+            <div class="flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-slate-800 bg-white p-2.5 sm:p-3.5 rounded-2xl border border-slate-200/80 shadow-sm leading-tight">
+              <span class="text-gold-600 font-bold shrink-0">★</span>
+              <span class="truncate">{ekstra}</span>
             </div>
           ))}
         </div>
