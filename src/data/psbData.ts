@@ -13,7 +13,7 @@ export interface LembagaFormal {
 export interface KomplekAsrama {
   id: number;
   nama: string;
-  kategori: 'Putra' | 'Putri' | 'Tahfidz' | 'Umum';
+  kategori: 'Putra' | 'Putri' | 'Putra - Putri' | 'Tahfidz' | 'Umum';
   deskripsi: string;
 }
 
@@ -127,15 +127,15 @@ export const KOMPLEK_ASRAMA: KomplekAsrama[] = [
   { id: 3, nama: 'Asrama As Syifaiyah', kategori: 'Putra', deskripsi: 'Komplek asrama putra berkonsep sejuk dan islami.' },
   { id: 4, nama: 'Asrama Ahlul Quro\'', kategori: 'Tahfidz', deskripsi: 'Komplek khusus program intensif Tahfidzul Qur\'an.' },
   { id: 5, nama: 'Asrama Al Khodijah', kategori: 'Putri', deskripsi: 'Komplek asrama putri utama dengan lingkungan asri.' },
-  { id: 6, nama: 'Asrama Arruhamaiyah', kategori: 'Putri', deskripsi: 'Komplek santri putri berfokus pada pendidikan akhlak.' },
-  { id: 7, nama: 'Asrama Al Mathlabi', kategori: 'Putra', deskripsi: 'Komplek penghormatan untuk pendiri KH. Moh. Yahdi Mathlab.' },
+  { id: 6, nama: 'Asrama Arruhamaiyah', kategori: 'Putra - Putri', deskripsi: 'Komplek santri berfokus pada pembinaan akhlak & karakter.' },
+  { id: 7, nama: 'Asrama Al Mathlabi', kategori: 'Putri', deskripsi: 'Komplek asrama putri penghormatan pendiri KH. Moh. Yahdi Mathlab.' },
   { id: 8, nama: 'Asrama Baitul Qur\'an', kategori: 'Tahfidz', deskripsi: 'Komplek karantina huffadz Al-Qur\'an 30 Juz.' },
   { id: 9, nama: 'Asrama Darul Qur\'an', kategori: 'Tahfidz', deskripsi: 'Pusat pembelajaran tajwid dan qiroat Al-Qur\'an.' },
-  { id: 10, nama: 'Asrama Al Qurthuby', kategori: 'Putra', deskripsi: 'Komplek santri menengah tinggi dan mahasiswa.' },
+  { id: 10, nama: 'Asrama Al Qurthuby', kategori: 'Putra - Putri', deskripsi: 'Komplek santri menengah tinggi dan mahasiswa.' },
   { id: 11, nama: 'Asrama Darus Salam', kategori: 'Umum', deskripsi: 'Komplek kedamaian untuk pengembangan bahasa asing.' },
   { id: 12, nama: 'Asrama Hidayatus Sibyan', kategori: 'Umum', deskripsi: 'Komplek khusus pembinaan santri usia dini/anak-anak.' },
-  { id: 13, nama: 'Asrama Raudhatul Hikmah', kategori: 'Putri', deskripsi: 'Komplek putri pengembangan kajian ilmu-ilmu keislaman.' },
-  { id: 14, nama: 'Asrama Al Barokah', kategori: 'Umum', deskripsi: 'Komplek terpadu pendukung kegiatan akademik dan ekstrakurikuler.' },
+  { id: 13, nama: 'Asrama Darun Na\'im', kategori: 'Putra', deskripsi: 'Komplek asrama putra pengembangan kajian ilmu-ilmu keislaman.' },
+  { id: 14, nama: 'Asrama Al Hikmah', kategori: 'Putri', deskripsi: 'Komplek asrama putri terpadu pendukung kegiatan akademik.' },
 ];
 
 export const LINI_MASA_HISTORY: LiniMasaHistory[] = [
