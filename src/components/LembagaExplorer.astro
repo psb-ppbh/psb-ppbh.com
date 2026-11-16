@@ -2,58 +2,57 @@
 import { LEMBAGA_FORMAL } from '../data/psbData';
 ---
 
-<section id="lembaga" class="py-20 bg-emerald-950 text-white relative overflow-hidden">
-
+<section id="lembaga" class="py-20 bg-light-bg text-slate-800 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
     <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <span class="inline-block px-4 py-1.5 bg-gold-500/20 text-gold-300 border border-gold-400/30 rounded-full text-xs font-extrabold uppercase tracking-widest">
-        Pendidikan Formal Integrated
+      <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-900 border border-emerald-200 rounded-full text-xs font-extrabold uppercase tracking-widest">
+        Parent Gateway / Induk Pintu Gerbang
       </span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-serif">
-        5 Jenjang Lembaga Pendidikan Formal
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 font-serif">
+        5 Lembaga Pendidikan Formal PPBH
       </h2>
-      <p class="text-emerald-200 text-sm sm:text-base">
-        Terakreditasi resmi, mengintegrasikan kurikulum kementerian nasional dengan keunggulan keilmuan pesantren salafiyah.
+      <p class="text-slate-600 text-sm sm:text-base">
+        Akses portal resmi masing-masing sekolah formal di bawah naungan Yayasan Bidayatul Hidayah Mojogeneng.
       </p>
-      <div class="w-20 h-1.5 bg-gold-400 mx-auto rounded-full"></div>
+      <div class="w-20 h-1.5 bg-gold-500 mx-auto rounded-full"></div>
     </div>
 
-    <!-- Cards Grid -->
+    <!-- Cards Grid with School Domain Portals -->
     <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {LEMBAGA_FORMAL.map(lembaga => (
-        <div class="bg-emerald-900/80 border border-emerald-700/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-gold-400/60 transition-all duration-300 hover:-translate-y-1 shadow-xl group">
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-300 hover:border-emerald-700 group">
 
           <div class="space-y-4">
-            <!-- Jenjang Badge -->
+            <!-- Jenjang Badge & Icon -->
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 bg-gold-400 text-emerald-950 text-xs font-extrabold rounded-xl uppercase tracking-wider">
+              <span class="px-3.5 py-1 bg-emerald-900 text-gold-300 text-xs font-extrabold rounded-xl uppercase tracking-wider">
                 {lembaga.jenjang}
               </span>
-              <span class="text-2xl group-hover:scale-110 transition-transform">
+              <span class="text-3xl group-hover:scale-110 transition-transform">
                 {lembaga.id === 'ra' ? '👶' : lembaga.id === 'mi' ? '📚' : lembaga.id === 'mts' ? '🎓' : lembaga.id === 'ma' ? '🏛️' : '💻'}
               </span>
             </div>
 
             <!-- Nama Sekolah -->
-            <h3 class="text-xl font-bold text-white font-serif group-hover:text-gold-300 transition-colors">
+            <h3 class="text-xl font-bold text-emerald-950 font-serif group-hover:text-emerald-800 transition-colors">
               {lembaga.nama}
             </h3>
 
             <!-- Deskripsi -->
-            <p class="text-xs sm:text-sm text-emerald-200 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               {lembaga.deskripsi}
             </p>
 
             <!-- Jurusan jika SMK -->
             {lembaga.jurusan && (
               <div class="pt-2">
-                <div class="text-[11px] font-bold text-gold-400 uppercase tracking-wider mb-2">Konsentrasi Keahlian / Jurusan:</div>
+                <div class="text-[11px] font-bold text-emerald-900 uppercase tracking-wider mb-2">Konsentrasi Keahlian / Jurusan:</div>
                 <div class="space-y-1.5">
                   {lembaga.jurusan.map(j => (
-                    <div class="text-xs bg-emerald-950 p-2 rounded-xl border border-emerald-700 text-emerald-100 flex items-center gap-2">
-                      <span class="text-gold-400">⚡</span>
+                    <div class="text-xs bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 text-emerald-950 font-semibold flex items-center gap-2">
+                      <span class="text-gold-600 font-bold">⚡</span>
                       <span>{j}</span>
                     </div>
                   ))}
@@ -62,34 +61,52 @@ import { LEMBAGA_FORMAL } from '../data/psbData';
             )}
           </div>
 
-          <!-- Kepala Sekolah Footer -->
-          {lembaga.kepalaSekolah && (
-            <div class="mt-6 pt-4 border-t border-emerald-800 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-emerald-800 border border-gold-400/40 flex items-center justify-center text-xs font-bold text-gold-300">
-                KS
+          <!-- Bottom Area: Kepala Sekolah & Official Domain Link Button -->
+          <div class="mt-6 pt-4 border-t border-slate-100 space-y-4">
+            {lembaga.kepalaSekolah && (
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-300 flex items-center justify-center text-xs font-bold text-emerald-900">
+                  KS
+                </div>
+                <div>
+                  <div class="text-[10px] text-slate-400 font-bold uppercase">Kepala Sekolah</div>
+                  <div class="text-xs font-bold text-slate-800">{lembaga.kepalaSekolah}</div>
+                </div>
               </div>
-              <div>
-                <div class="text-[10px] text-emerald-300 uppercase tracking-wider">Kepala Sekolah</div>
-                <div class="text-xs font-bold text-white">{lembaga.kepalaSekolah}</div>
-              </div>
-            </div>
-          )}
+            )}
+
+            <!-- Official Domain Web Gateway Button -->
+            {lembaga.domainUrl ? (
+              <a
+                href={lembaga.domainUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-900 font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-between transition-colors shadow-sm"
+              >
+                <span class="truncate font-mono">{lembaga.domainUrl.replace('https://', '')}</span>
+                <span class="text-emerald-700">↗</span>
+              </a>
+            ) : (
+              <div class="text-[11px] text-slate-400 italic">Domain terintegrasi di portal induk PSB</div>
+            )}
+          </div>
 
         </div>
       ))}
     </div>
 
-    <!-- Quick Callout -->
-    <div class="mt-12 bg-gradient-to-r from-emerald-900 to-emerald-950 border-2 border-gold-400/40 p-6 sm:p-8 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6">
+    <!-- Parent Gateway Banner -->
+    <div class="mt-12 bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white p-6 sm:p-8 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl border border-gold-400/40">
       <div class="space-y-1 text-center sm:text-left">
-        <h4 class="text-lg font-bold text-gold-300 font-serif">Pendaftaran Terpadu 1 Akses</h4>
-        <p class="text-xs sm:text-sm text-emerald-200">Seluruh jenjang formal terkoneksi langsung dengan pilihan 14 Komplek Asrama PPBH Mojogeneng.</p>
+        <div class="inline-block text-[10px] bg-gold-400 text-emerald-950 px-2.5 py-0.5 rounded font-extrabold uppercase">Satu Akses Pendaftaran</div>
+        <h4 class="text-xl font-bold font-serif text-white">PSB PPBH Sebagai Induk Pintu Gerbang</h4>
+        <p class="text-xs sm:text-sm text-emerald-200 max-w-xl">Pendaftaran terpadu seluruh lembaga formal & 14 komplek asrama dilakukan langsung dari portal ini.</p>
       </div>
       <a
         href="#daftar"
-        class="bg-gold-400 hover:bg-gold-500 text-emerald-950 font-extrabold text-sm px-6 py-3 rounded-2xl transition-all whitespace-nowrap shadow-lg"
+        class="bg-gold-400 hover:bg-gold-500 text-emerald-950 font-extrabold text-sm px-6 py-3.5 rounded-2xl transition-all whitespace-nowrap shadow-md"
       >
-        Pilih Lembaga & Daftar
+        Mulai Pendaftaran Online
       </a>
     </div>
 

@@ -2,43 +2,54 @@
 import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } from '../data/psbData';
 ---
 
-<section id="profil" class="py-20 bg-cream-100 text-slate-800 relative">
+<section id="profil" class="py-20 bg-white text-slate-800 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <span class="inline-block px-4 py-1.5 bg-emerald-800/10 text-emerald-800 rounded-full text-xs font-extrabold uppercase tracking-widest">
-        Sejarah & Profil Yayasan
+      <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-900 rounded-full text-xs font-extrabold uppercase tracking-widest border border-emerald-200">
+        Sejarah & Perjalanan
       </span>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 font-serif">
-        Mendidik Generasi Rabbani Sejak Tahun 1948
+        Profil Yayasan Bidayatul Hidayah Mojogeneng
       </h2>
+      <p class="text-slate-600 text-sm sm:text-base">
+        Didirikan sejak tahun 1948 di Desa Mojogeneng, Jatirejo, Mojokerto. Membina ribuan alumni berkualitas yang tersebar di Nusantara.
+      </p>
       <div class="w-20 h-1.5 bg-gold-500 mx-auto rounded-full"></div>
     </div>
 
-    <!-- History & Caretaker Card -->
-    <div class="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+    <!-- Sejarah Narrative & Real Photo Gallery Grid -->
+    <div class="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
 
-      <!-- Sejarah Narrative -->
-      <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-sage-200 shadow-lg flex flex-col justify-between">
+      <!-- Sejarah Narrative Card -->
+      <div class="lg:col-span-7 bg-light-soft p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
         <div class="space-y-4 text-slate-700 leading-relaxed text-base">
+          <div class="flex items-center gap-3 mb-2">
+            <img src={YAYASAN_INFO.logoUrl} alt="Logo" class="w-10 h-10 object-contain" />
+            <div>
+              <div class="text-xs text-gold-600 font-bold uppercase tracking-wider">Berdiri Sejak 1948</div>
+              <div class="text-lg font-bold text-emerald-950 font-serif">Sejarah Pendirian Pesantren</div>
+            </div>
+          </div>
+
           <p>
-            <strong>Yayasan Pondok Pesantren Bidayatul Hidayah</strong> merupakan pondok pesantren yang didirikan oleh orang alim dan Hafidh Al-Qur'an yaitu <strong class="text-emerald-900">{YAYASAN_INFO.pendiri}</strong> di Desa Mojogeneng, Kecamatan Jatirejo, Kabupaten Mojokerto, Jawa Timur pada tahun <strong>1948</strong>.
+            <strong>Yayasan Pondok Pesantren Bidayatul Hidayah</strong> merupakan Pondok Pesantren yang didirikan oleh seorang ulama alim dan Hafidh Al-Qur'an yaitu <strong class="text-emerald-900">{YAYASAN_INFO.pendiri}</strong> di Desa Mojogeneng, Kecamatan Jatirejo, Kabupaten Mojokerto, Jawa Timur pada tahun <strong>1948</strong>.
           </p>
           <p>
-            Saat ini Pondok Pesantren Bidayatul Hidayah diasuh oleh <strong class="text-emerald-900">KH. Agus Salim Yahdi</strong> (Putra dari KH. Moh. Yahdi Mathlab) bersama <strong class="text-emerald-900">Kiai Nur Hasan</strong>. Berbekal ilmu dan pengalaman beliau di bidang ilmu agama, Yayasan Ponpes Bidayatul Hidayah mengalami perkembangan cukup pesat dari segi kuantitas maupun kualitasnya.
+            Saat ini Pondok Pesantren Bidayatul Hidayah diasuh oleh <strong class="text-emerald-900">KH. Agus Salim Yahdi</strong> (Putra dari KH. Moh. Yahdi Mathlab) bersama <strong class="text-emerald-900">Kiai Nur Hasan</strong>. Berbekal ilmu dan keikhlasan beliau di bidang ilmu agama, Yayasan Ponpes Bidayatul Hidayah mengalami perkembangan pesat.
           </p>
-          <p class="text-sm text-emerald-800 font-medium bg-emerald-50 p-4 rounded-2xl border-l-4 border-emerald-700">
-            Kini PPBH menaungi <strong>14 Komplek Asrama</strong> serta unit pendidikan formal dan non-formal yang saling terintegrasi dalam pembentukan karakter santri berakhlaqul karimah.
-          </p>
+          <div class="p-4 bg-white rounded-2xl border-l-4 border-emerald-800 text-sm text-emerald-900 font-semibold shadow-sm">
+            Saat ini Pon Pes Bidayatul Hidayah mengelola <strong>14 Komplek Asrama</strong> serta unit pendidikan formal dan non-formal yang saling terintegrasi.
+          </div>
         </div>
 
-        <!-- Non-Formal Institutions Pill Badges -->
-        <div class="pt-6 border-t border-slate-100">
+        <!-- Non-Formal Institutions -->
+        <div class="pt-6 border-t border-slate-200 mt-6">
           <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Lembaga Non-Formal Pesantren:</div>
           <div class="flex flex-wrap gap-2">
             {LEMBAGA_NON_FORMAL.map(item => (
-              <span class="px-3 py-1 bg-sage-100 text-emerald-900 text-xs font-semibold rounded-lg border border-sage-200">
+              <span class="px-3.5 py-1.5 bg-white text-emerald-950 text-xs font-bold rounded-xl border border-emerald-200 shadow-sm">
                 {item}
               </span>
             ))}
@@ -46,36 +57,42 @@ import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } fr
         </div>
       </div>
 
-      <!-- Pengasuh & Pendiri Honor Card -->
-      <div class="lg:col-span-5 bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between border-2 border-gold-400/40">
-        <div class="space-y-6">
-          <div class="flex items-center gap-3">
-            <span class="text-3xl">🕌</span>
-            <div>
-              <div class="text-xs text-gold-400 font-bold uppercase tracking-wider">Pengasuh & Pendiri</div>
-              <div class="text-lg font-bold font-serif">Ponpes Bidayatul Hidayah</div>
-            </div>
-          </div>
+      <!-- Real Photo Card & Pengasuh Honor -->
+      <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
 
-          <div class="space-y-4 pt-2">
-            <div class="p-4 bg-emerald-900/80 rounded-2xl border border-emerald-700">
-              <div class="text-xs text-emerald-300 font-medium">PENDIRI PONPES (1948)</div>
-              <div class="text-base font-bold text-gold-300 mt-0.5">{YAYASAN_INFO.pendiri}</div>
-              <div class="text-[11px] text-emerald-200 mt-1">Ulama Alim & Hafidh Al-Qur'an Mojogeneng</div>
-            </div>
-
-            <div class="p-4 bg-emerald-900/80 rounded-2xl border border-emerald-700">
-              <div class="text-xs text-emerald-300 font-medium">PENGASUH PONPES</div>
-              <div class="text-base font-bold text-white mt-0.5">KH. Agus Salim Yahdi & Kiai Nur Hasan</div>
-              <div class="text-[11px] text-emerald-200 mt-1">Melanjutkan estafet perjuangan keilmuan & pembinaan santri</div>
+        <!-- Real Photo Frame -->
+        <div class="relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 group h-64 sm:h-72">
+          <img
+            src={YAYASAN_INFO.fotoKegiatanUrl}
+            alt="Kegiatan Santri Bidayatul Hidayah"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/85 via-emerald-950/20 to-transparent flex items-end p-6">
+            <div class="text-white space-y-1">
+              <span class="px-2.5 py-1 bg-gold-500 text-emerald-950 text-[10px] font-extrabold rounded-md uppercase">
+                Suasana Pesantren
+              </span>
+              <h3 class="text-base font-bold font-serif">Kajian & Pembinaan Akhlak Santri</h3>
+              <p class="text-xs text-emerald-200">Mojogeneng, Jatirejo, Mojokerto</p>
             </div>
           </div>
         </div>
 
-        <div class="pt-6 border-t border-emerald-800 text-xs text-emerald-200 flex items-center justify-between">
-          <span>Mojogeneng, Jatirejo, Mojokerto</span>
-          <span class="text-gold-400 font-semibold">Est. 1948</span>
+        <!-- Pengasuh Brief Box -->
+        <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-gold-400/40 space-y-4">
+          <div class="text-xs text-gold-300 font-bold uppercase tracking-widest">Amanah Kepengasuhan</div>
+          <div class="space-y-3">
+            <div class="bg-emerald-900/90 p-3.5 rounded-2xl border border-emerald-700">
+              <div class="text-[10px] text-emerald-300 uppercase">PENDIRI PONPES (1948)</div>
+              <div class="text-sm font-bold text-gold-300">{YAYASAN_INFO.pendiri}</div>
+            </div>
+            <div class="bg-emerald-900/90 p-3.5 rounded-2xl border border-emerald-700">
+              <div class="text-[10px] text-emerald-300 uppercase">PENGASUH PONPES</div>
+              <div class="text-sm font-bold text-white">KH. Agus Salim Yahdi & Kiai Nur Hasan</div>
+            </div>
+          </div>
         </div>
+
       </div>
 
     </div>
@@ -84,30 +101,36 @@ import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } fr
     <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
 
       <!-- Kegiatan Santri Harian -->
-      <div class="bg-white p-8 rounded-3xl border border-sage-200 shadow-md">
+      <div class="bg-light-soft p-8 rounded-3xl border border-slate-200 shadow-sm">
         <div class="flex items-center gap-3 mb-6">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl font-bold">📖</div>
-          <h3 class="text-xl font-bold text-emerald-950 font-serif">Kegiatan Santri Harian</h3>
+          <div class="w-10 h-10 rounded-2xl bg-emerald-900 text-gold-300 flex items-center justify-center text-xl font-bold">📖</div>
+          <div>
+            <h3 class="text-xl font-bold text-emerald-950 font-serif">Kegiatan Santri Harian</h3>
+            <p class="text-xs text-slate-500">Rutinitas keilmuan & ibadah di pesantren</p>
+          </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {KEGIATAN_SANTRI.map(kegiatan => (
-            <div class="flex items-center gap-2 text-sm text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
-              <span class="text-emerald-700 font-bold">•</span>
+            <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm">
+              <span class="text-emerald-700 font-bold">✓</span>
               <span>{kegiatan}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Ekstrakurikuler -->
-      <div class="bg-white p-8 rounded-3xl border border-sage-200 shadow-md">
+      <!-- Ekstrakurikuler & Pengembangan Bakat -->
+      <div class="bg-light-soft p-8 rounded-3xl border border-slate-200 shadow-sm">
         <div class="flex items-center gap-3 mb-6">
-          <div class="w-10 h-10 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center text-xl font-bold">🏆</div>
-          <h3 class="text-xl font-bold text-emerald-950 font-serif">Ekstrakurikuler & Bakat</h3>
+          <div class="w-10 h-10 rounded-2xl bg-gold-500 text-emerald-950 flex items-center justify-center text-xl font-bold">🏆</div>
+          <div>
+            <h3 class="text-xl font-bold text-emerald-950 font-serif">Ekstrakurikuler & Bakat</h3>
+            <p class="text-xs text-slate-500">Wadah minat, bakat, & seni santri</p>
+          </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {EKSTRAKURIKULER.map(ekstra => (
-            <div class="flex items-center gap-2 text-sm text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm">
               <span class="text-gold-600 font-bold">★</span>
               <span>{ekstra}</span>
             </div>

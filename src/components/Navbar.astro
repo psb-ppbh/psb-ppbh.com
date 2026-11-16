@@ -1,71 +1,71 @@
 ---
+import { YAYASAN_INFO } from '../data/psbData';
 ---
 
-<header class="sticky top-0 z-40 bg-emerald-900/95 backdrop-blur-md border-b border-emerald-800 text-white shadow-lg">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-emerald-100 text-slate-800 shadow-sm transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
 
-      <!-- Brand & Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 p-0.5 shadow-md group-hover:scale-105 transition-transform">
-          <div class="w-full h-full bg-emerald-950 rounded-[14px] flex items-center justify-center overflow-hidden">
-            <span class="text-xl font-bold font-arabic text-gold-400">BH</span>
-          </div>
+      <!-- Official Logo & Brand -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="relative w-12 h-12 flex items-center justify-center p-1 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border border-emerald-200 shadow-sm group-hover:scale-105 transition-transform">
+          <img src={YAYASAN_INFO.logoUrl} alt="Logo PPBH" class="w-full h-full object-contain" />
         </div>
         <div>
-          <div class="text-xs font-semibold text-gold-400 tracking-wider uppercase">Yayasan Ponpes</div>
-          <div class="text-base font-extrabold tracking-tight text-white group-hover:text-gold-300 transition-colors">
+          <div class="text-[10px] font-extrabold text-gold-600 tracking-wider uppercase">Yayasan Ponpes</div>
+          <div class="text-base sm:text-lg font-extrabold tracking-tight text-emerald-950 group-hover:text-emerald-800 transition-colors font-serif">
             Bidayatul Hidayah
           </div>
-          <div class="text-[10px] text-emerald-200">Mojogeneng - Jatirejo - Mojokerto</div>
+          <div class="text-[10px] text-slate-500 font-medium">Mojogeneng - Jatirejo - Mojokerto</div>
         </div>
       </a>
 
-      <!-- Desktop Nav Menu -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
-        <a href="#profil" class="text-emerald-100 hover:text-gold-300 transition-colors">Profil</a>
-        <a href="#lembaga" class="text-emerald-100 hover:text-gold-300 transition-colors">5 Lembaga</a>
-        <a href="#komplek" class="text-emerald-100 hover:text-gold-300 transition-colors">14 Komplek</a>
-        <a href="#syarat" class="text-emerald-100 hover:text-gold-300 transition-colors">Syarat & Alur</a>
-        <a href="#forum" class="text-emerald-100 hover:text-gold-300 transition-colors flex items-center gap-1.5">
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
+        <a href="#profil" class="hover:text-emerald-900 transition-colors">Profil</a>
+        <a href="#lembaga" class="hover:text-emerald-900 transition-colors">5 Lembaga</a>
+        <a href="#komplek" class="hover:text-emerald-900 transition-colors">14 Komplek</a>
+        <a href="#syarat" class="hover:text-emerald-900 transition-colors">Syarat & Alur</a>
+        <a href="#forum" class="hover:text-emerald-900 transition-colors flex items-center gap-1.5">
           <span>Forum Q&A</span>
-          <span class="bg-gold-500 text-emerald-950 text-[10px] font-bold px-1.5 py-0.5 rounded-full">Live</span>
+          <span class="bg-emerald-900 text-gold-300 text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-sm">Live</span>
         </a>
       </nav>
 
-      <!-- Action Button -->
+      <!-- CTA Button -->
       <div class="hidden sm:flex items-center gap-4">
         <a
           href="#daftar"
-          class="bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 text-emerald-950 font-bold text-sm px-5 py-2.5 rounded-xl shadow-md hover:shadow-gold-500/20 transition-all hover:-translate-y-0.5"
+          class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 hover:from-emerald-950 hover:to-emerald-900 text-white font-extrabold text-sm px-6 py-3 rounded-2xl shadow-md hover:shadow-emerald-900/20 transition-all hover:-translate-y-0.5 border border-gold-400/30 flex items-center gap-2"
         >
-          Daftar PSB 2027/2028
+          <span>Daftar PSB 2027/2028</span>
+          <span class="text-gold-400">➔</span>
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu Toggle -->
       <button
         id="mobile-menu-btn"
         type="button"
-        class="lg:hidden p-2 rounded-lg text-emerald-200 hover:text-white hover:bg-emerald-800 focus:outline-none"
+        class="lg:hidden p-2.5 rounded-xl text-emerald-900 hover:bg-emerald-50 focus:outline-none border border-emerald-200"
         aria-label="Toggle Menu"
       >
         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
     </div>
   </div>
 
-  <!-- Mobile Menu Drawer -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-emerald-950 border-b border-emerald-800 px-4 pt-2 pb-6 space-y-3">
-    <a href="#profil" class="block text-emerald-100 hover:text-gold-300 py-2">Profil Pesantren</a>
-    <a href="#lembaga" class="block text-emerald-100 hover:text-gold-300 py-2">5 Lembaga Formal</a>
-    <a href="#komplek" class="block text-emerald-100 hover:text-gold-300 py-2">14 Komplek Asrama</a>
-    <a href="#syarat" class="block text-emerald-100 hover:text-gold-300 py-2">Syarat & Alur Pendaftaran</a>
-    <a href="#forum" class="block text-emerald-100 hover:text-gold-300 py-2">Forum Diskusi Q&A</a>
-    <a href="#daftar" class="block bg-gold-400 text-emerald-950 text-center font-bold py-3 rounded-xl mt-4">Daftar PSB 2027/2028 Sekarang</a>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-emerald-100 px-6 pt-2 pb-6 space-y-3 shadow-lg">
+    <a href="#profil" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Profil Pesantren</a>
+    <a href="#lembaga" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">5 Lembaga Formal</a>
+    <a href="#komplek" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">14 Komplek Asrama</a>
+    <a href="#syarat" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Syarat & Alur Pendaftaran</a>
+    <a href="#forum" class="block text-slate-800 hover:text-emerald-900 font-semibold py-2">Forum Diskusi Q&A</a>
+    <a href="#daftar" class="block bg-emerald-900 text-white text-center font-bold py-3.5 rounded-2xl mt-4 border border-gold-400/40">Daftar PSB 2027/2028 Sekarang</a>
   </div>
 </header>
 

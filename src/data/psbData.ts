@@ -7,6 +7,7 @@ export interface LembagaFormal {
   deskripsi: string;
   jurusan?: string[];
   icon: string;
+  domainUrl?: string;
 }
 
 export interface KomplekAsrama {
@@ -45,6 +46,8 @@ export const YAYASAN_INFO = {
   tahunAjaran: "2027/2028",
   tglBukaPendaftaran: "01 Maret 2027",
   biayaPendaftaran: "Rp 200.000",
+  logoUrl: "/logo-ppbh.png",
+  fotoKegiatanUrl: "/foto-kegiatan.png",
 };
 
 export const LEMBAGA_FORMAL: LembagaFormal[] = [
@@ -62,6 +65,7 @@ export const LEMBAGA_FORMAL: LembagaFormal[] = [
     kepalaSekolah: 'H. Irwan Hamzah, M.Pd.',
     deskripsi: 'Madrasah Ibtidaiyah terpadu gabungan kurikulum kementerian agama dan kurikulum khas pesantren salafiyah.',
     icon: 'BookOpen',
+    domainUrl: 'https://mi-bidayatulhidayah.sch.id',
   },
   {
     id: 'mts',
@@ -70,6 +74,7 @@ export const LEMBAGA_FORMAL: LembagaFormal[] = [
     kepalaSekolah: 'Moch. Machim, M.Pd.',
     deskripsi: 'Madrasah Tsanawiyah unggulan pencetak generasi berprestasi akademis dan kuat dalam pemahaman kitab salaf.',
     icon: 'GraduationCap',
+    domainUrl: 'https://mojogenengmtssalafiyah.sch.id',
   },
   {
     id: 'ma',
@@ -78,6 +83,7 @@ export const LEMBAGA_FORMAL: LembagaFormal[] = [
     kepalaSekolah: 'Natsir Wibowo, M.Pd.',
     deskripsi: 'Madrasah Aliyah persiapan perguruan tinggi terkemuka dengan basis ilmu keagamaan yang kokoh.',
     icon: 'School',
+    domainUrl: 'https://mabidamojogeneng.sch.id',
   },
   {
     id: 'smk',
@@ -87,6 +93,7 @@ export const LEMBAGA_FORMAL: LembagaFormal[] = [
     jurusan: ['Teknik Komputer dan Jaringan (TKJ)', 'Desain Komunikasi Visual (DKV)'],
     deskripsi: 'Sekolah Menengah Kejuruan berwawasan teknologi modern dan kewirausahaan bernuansa pesantren.',
     icon: 'Laptop',
+    domainUrl: 'https://smkbidayatulhidayah.sch.id',
   },
 ];
 

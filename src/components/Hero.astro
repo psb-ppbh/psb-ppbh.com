@@ -2,123 +2,126 @@
 import { YAYASAN_INFO } from '../data/psbData';
 ---
 
-<section class="relative overflow-hidden bg-gradient-to-b from-emerald-900 via-emerald-800 to-emerald-950 text-white pt-12 pb-20 lg:pt-20 lg:pb-32">
+<section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/80 via-white to-light-bg text-slate-800 pt-10 pb-20 lg:pt-16 lg:pb-28">
 
-  <!-- Decorative Naturalist Vector Background Elements -->
-  <div class="absolute inset-0 opacity-10 pointer-events-none">
-    <div class="absolute top-10 left-10 w-96 h-96 bg-gold-400 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 right-10 w-96 h-96 bg-sage-400 rounded-full blur-3xl"></div>
-    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <path d="M0,0 C30,40 70,10 100,30 L100,100 L0,100 Z" fill="#ffffff" fill-opacity="0.05" />
-    </svg>
+  <!-- Ambient Decorative Glow Background Elements -->
+  <div class="absolute inset-0 pointer-events-none opacity-40">
+    <div class="absolute -top-24 left-1/4 w-96 h-96 bg-emerald-200/50 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 right-10 w-96 h-96 bg-gold-300/30 rounded-full blur-3xl"></div>
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-      <!-- Text & Value Proposition -->
+      <!-- Headline & Main Copywriting -->
       <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
 
-        <!-- Live Status Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/80 border border-gold-400/40 text-gold-300 text-xs sm:text-sm font-semibold shadow-inner">
-          <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
+        <!-- Live Status Pill Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-emerald-200 text-emerald-900 text-xs sm:text-sm font-bold shadow-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-gold-500 animate-ping"></span>
           <span>Pendaftaran Resmi TP. {YAYASAN_INFO.tahunAjaran} Dibuka {YAYASAN_INFO.tglBukaPendaftaran}</span>
         </div>
 
-        <!-- Main Headline -->
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+        <!-- Main Headline with Cinematic Typography -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-emerald-950 font-serif">
           Satu Pintu Gerbang <br class="hidden sm:block" />
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 font-serif">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-900 via-emerald-800 to-gold-600">
             Siswa & Santri Baru
           </span>
         </h1>
 
-        <p class="text-base sm:text-lg text-emerald-100 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-          Selamat datang di <strong class="text-gold-300">Yayasan Pondok Pesantren Bidayatul Hidayah (PPBH) Mojogeneng</strong>. Mendidik generasi Rabbani sejak 1948 dengan perpaduan kurikulum formal unggulan dan tradisi pesantren salafiyah.
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+          Selamat datang di portal resmi <strong class="text-emerald-900">{YAYASAN_INFO.nama} Mojogeneng</strong>. Mendidik generasi Rabbani berakhlaqul karimah sejak tahun 1948 dengan perpaduan kurikulum formal nasional dan tradisi salafiyah.
         </p>
 
-        <!-- Feature Badges -->
+        <!-- Value Badges Grid -->
         <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
-          <div class="px-3.5 py-1.5 rounded-xl bg-emerald-950/60 border border-emerald-700 text-xs text-emerald-200 flex items-center gap-2">
-            <span class="text-gold-400 font-bold">✓</span> 5 Lembaga Formal (RA, MI, MTs, MA, SMK)
+          <div class="px-4 py-2 rounded-2xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+            <span class="text-emerald-700 font-bold">✓</span> 5 Lembaga Formal Integrated
           </div>
-          <div class="px-3.5 py-1.5 rounded-xl bg-emerald-950/60 border border-emerald-700 text-xs text-emerald-200 flex items-center gap-2">
-            <span class="text-gold-400 font-bold">✓</span> 14 Komplek Asrama Putra & Putri
+          <div class="px-4 py-2 rounded-2xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+            <span class="text-emerald-700 font-bold">✓</span> 14 Komplek Asrama Putra & Putri
           </div>
-          <div class="px-3.5 py-1.5 rounded-xl bg-emerald-950/60 border border-emerald-700 text-xs text-emerald-200 flex items-center gap-2">
-            <span class="text-gold-400 font-bold">✓</span> Program Tahfidz & Kitab Salaf
+          <div class="px-4 py-2 rounded-2xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm flex items-center gap-2">
+            <span class="text-emerald-700 font-bold">✓</span> Tahfidzul Qur'an & Kitab Salaf
           </div>
         </div>
 
-        <!-- CTA Action Group -->
+        <!-- Action CTA Buttons -->
         <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
           <a
             href="#daftar"
-            class="w-full sm:w-auto bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-emerald-950 font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl hover:shadow-gold-500/25 transition-all transform hover:-translate-y-1 text-center"
+            class="w-full sm:w-auto bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 hover:from-emerald-950 hover:to-emerald-900 text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl hover:shadow-emerald-900/25 transition-all transform hover:-translate-y-1 text-center border border-gold-400/30"
           >
             Daftar PSB Online Sekarang
           </a>
           <a
             href="#syarat"
-            class="w-full sm:w-auto bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-600 text-emerald-100 hover:text-white font-semibold text-base px-6 py-4 rounded-2xl transition-all text-center flex items-center justify-center gap-2"
+            class="w-full sm:w-auto bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold text-base px-6 py-4 rounded-2xl shadow-sm transition-all text-center flex items-center justify-center gap-2"
           >
-            <span>Syarat & Jadwal</span>
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
+            <span>Syarat & Jadwal Seleksi</span>
+            <span class="text-emerald-800">➔</span>
           </a>
         </div>
 
-        <!-- Pengasuh Brief -->
-        <div class="pt-6 border-t border-emerald-800/80 flex items-center justify-center lg:justify-start gap-4 text-xs text-emerald-200">
-          <div>
-            <span class="text-emerald-400 font-semibold">Pengasuh:</span> KH. Agus Salim Yahdi & Kiai Nur Hasan
-          </div>
-          <span class="text-emerald-700">•</span>
-          <div>
-            <span class="text-emerald-400 font-semibold">Pendiri:</span> KH. Moh. Yahdi Mathlab (Alm)
-          </div>
+        <!-- Caretakers Quote Brief -->
+        <div class="pt-6 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-500">
+          <div><strong class="text-emerald-900">Pengasuh:</strong> {YAYASAN_INFO.pengasuh.join(' & ')}</div>
+          <span class="text-slate-300">•</span>
+          <div><strong class="text-emerald-900">Pendiri:</strong> {YAYASAN_INFO.pendiri}</div>
         </div>
 
       </div>
 
-      <!-- Hero Visual Semi-Kartun & Naturalis Illustration Frame -->
+      <!-- Real Image Showcase Card (Real Photo + Glassmorphic Frame) -->
       <div class="lg:col-span-5 flex justify-center">
         <div class="relative w-full max-w-md">
 
-          <!-- Outer Glow Ring -->
-          <div class="absolute -inset-2 bg-gradient-to-tr from-gold-400 to-emerald-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+          <!-- Outer Soft Glow Ring -->
+          <div class="absolute -inset-3 bg-gradient-to-tr from-emerald-300/40 via-gold-300/30 to-emerald-400/40 rounded-[2.5rem] blur-2xl opacity-70"></div>
 
-          <!-- Main Semi-Cartoon Card Frame -->
-          <div class="relative bg-emerald-950/90 border-2 border-gold-400/60 rounded-3xl p-6 shadow-2xl space-y-5 text-center">
+          <!-- Main Real Showcase Frame -->
+          <div class="relative bg-white/90 border border-emerald-200/80 rounded-[2rem] p-5 shadow-2xl backdrop-blur-xl space-y-4">
 
-            <!-- Cartoon Santri Illustration Badge -->
-            <div class="mx-auto w-32 h-32 bg-gradient-to-br from-emerald-800 to-emerald-900 rounded-full border-4 border-gold-400 flex items-center justify-center shadow-inner relative overflow-hidden">
-              <div class="text-center">
-                <span class="text-4xl">🕌</span>
-                <div class="text-[10px] font-bold text-gold-300 uppercase tracking-widest mt-1">PPBH 2027</div>
+            <!-- Real Photo Image Container -->
+            <div class="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden shadow-md border border-slate-200 group">
+              <img
+                src={YAYASAN_INFO.fotoKegiatanUrl}
+                alt="Kegiatan Santri PPBH Mojogeneng"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent flex items-end p-4">
+                <div class="text-white space-y-0.5">
+                  <div class="text-[10px] text-gold-300 font-bold uppercase tracking-widest">Kampus PPBH Mojogeneng</div>
+                  <div class="text-sm font-bold font-serif">Mendidik Karakter & Keilmuan</div>
+                </div>
               </div>
             </div>
 
-            <div>
-              <h2 class="text-xl font-bold text-white font-serif">Pondok Pesantren Bidayatul Hidayah</h2>
-              <p class="text-xs text-emerald-200 mt-1">Desa Mojogeneng, Kec. Jatirejo, Kab. Mojokerto</p>
-            </div>
-
-            <!-- Quick Stat Grid -->
-            <div class="grid grid-cols-2 gap-3 pt-2 text-left">
-              <div class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-700">
-                <div class="text-[10px] text-emerald-300 font-medium">BIAYA PENDAFTARAN</div>
-                <div class="text-base font-extrabold text-gold-300">Rp 200.000</div>
+            <!-- Official Badge Overlay -->
+            <div class="flex items-center justify-between bg-emerald-50 border border-emerald-200 p-3.5 rounded-2xl">
+              <div class="flex items-center gap-3">
+                <img src={YAYASAN_INFO.logoUrl} alt="Logo" class="w-10 h-10 object-contain" />
+                <div>
+                  <div class="text-xs font-bold text-emerald-950 font-serif">Yayasan Bidayatul Hidayah</div>
+                  <div class="text-[10px] text-emerald-700 font-medium">1 Pintu Akses 14 Komplek</div>
+                </div>
               </div>
-              <div class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-700">
-                <div class="text-[10px] text-emerald-300 font-medium">PEMBUKAAN</div>
-                <div class="text-base font-extrabold text-white">01 Maret 2027</div>
+              <div class="bg-emerald-900 text-gold-300 text-[11px] font-extrabold px-3 py-1.5 rounded-xl shadow-sm">
+                2027/2028
               </div>
             </div>
 
-            <div class="p-3 bg-gold-500/10 border border-gold-400/30 rounded-xl text-xs text-gold-200 flex items-center justify-center gap-2">
-              <span>📍 1 Pintu Pendaftaran Terpadu 14 Komplek</span>
+            <!-- Quick Stat Row -->
+            <div class="grid grid-cols-2 gap-3 text-left">
+              <div class="bg-light-soft p-3 rounded-xl border border-slate-200">
+                <div class="text-[10px] text-slate-500 font-bold uppercase">Biaya Pendaftaran</div>
+                <div class="text-sm font-extrabold text-emerald-900">{YAYASAN_INFO.biayaPendaftaran}</div>
+              </div>
+              <div class="bg-light-soft p-3 rounded-xl border border-slate-200">
+                <div class="text-[10px] text-slate-500 font-bold uppercase">Pembukaan</div>
+                <div class="text-sm font-extrabold text-emerald-900">{YAYASAN_INFO.tglBukaPendaftaran}</div>
+              </div>
             </div>
 
           </div>

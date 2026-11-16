@@ -5,40 +5,39 @@ export default {
     extend: {
       colors: {
         emerald: {
-          950: '#0B2920',
-          900: '#144033',
-          800: '#1B4D3E', // Dominan Naturalis PPBH
-          700: '#266C57',
-          600: '#328B71',
-          500: '#40AB8C',
-        },
-        sage: {
-          100: '#EAEFE9',
-          200: '#D5DFD3',
-          300: '#B5C7B3',
-          400: '#8FBC8F',
-          500: '#6C9F6C',
+          950: '#07241B',
+          900: '#0F4C3A', // Dominan Modern Emerald PPBH
+          800: '#135241',
+          700: '#1B634E',
+          600: '#237860',
+          500: '#2E9377',
+          100: '#E6F4F0',
+          50: '#F2F9F7',
         },
         gold: {
-          300: '#FBE8A6',
-          400: '#F4D068',
-          500: '#D4AF37', // Gold Accent
-          600: '#B89020',
+          300: '#F5DE8A',
+          400: '#F2C94C',
+          500: '#D4AF37', // Luxury Gold
+          600: '#B89220',
         },
-        cream: {
-          50: '#FDFCF7',
-          100: '#FAF6F0',
-          200: '#F4ECE1',
+        slate: {
+          850: '#131C2E',
+        },
+        light: {
+          bg: '#FAFAFA',
+          card: '#FFFFFF',
+          soft: '#F3F6F4',
         }
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-        arabic: ['Amiri', 'Traditional Arabic', 'serif'],
+        serif: ['Plus Jakarta Sans', 'Merriweather', 'serif'],
+        arabic: ['Amiri', 'serif'],
       },
-      borderRadius: {
-        '2xl': '1.25rem',
-        '3xl': '1.75rem',
-        '4xl': '2.25rem',
+      boxShadow: {
+        'glow-gold': '0 0 25px -5px rgba(212, 175, 55, 0.3)',
+        'glow-emerald': '0 0 25px -5px rgba(15, 76, 58, 0.25)',
+        'glass': '0 8px 32px 0 rgba(15, 76, 58, 0.08)',
       }
     },
   },

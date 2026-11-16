@@ -2,83 +2,83 @@
 import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
 ---
 
-<section id="daftar" class="py-20 bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 text-white relative overflow-hidden">
+<section id="daftar" class="py-20 bg-gradient-to-b from-white via-emerald-50/50 to-light-bg text-slate-800 relative overflow-hidden">
 
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
     <!-- Section Header -->
     <div class="text-center space-y-4">
-      <span class="inline-block px-4 py-1.5 bg-gold-400/20 text-gold-300 border border-gold-400/30 rounded-full text-xs font-extrabold uppercase tracking-widest">
+      <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-900 border border-emerald-200 rounded-full text-xs font-extrabold uppercase tracking-widest">
         Formulir Online PSB TP. {YAYASAN_INFO.tahunAjaran}
       </span>
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-serif">
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-emerald-950 font-serif">
         Pendaftaran Terpadu 1 Pintu Akses
       </h2>
-      <p class="text-emerald-200 text-sm sm:text-base max-w-xl mx-auto">
+      <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
         Isi formulir pendaftaran secara online untuk mendapatkan Kartu Pendaftaran Digital dan Akses Grup WA Resmi Calon Wali Santri.
       </p>
-      <div class="w-20 h-1.5 bg-gold-400 mx-auto rounded-full"></div>
+      <div class="w-20 h-1.5 bg-gold-500 mx-auto rounded-full"></div>
     </div>
 
     <!-- Step Progress Indicator -->
-    <div class="mt-10 flex items-center justify-center gap-4 text-xs font-bold" id="step-indicator">
-      <div class="step-badge step-1 flex items-center gap-2 text-gold-300">
-        <span class="w-7 h-7 rounded-full bg-gold-400 text-emerald-950 flex items-center justify-center font-extrabold">1</span>
+    <div class="mt-10 flex items-center justify-center gap-4 text-xs font-extrabold" id="step-indicator">
+      <div class="step-badge step-1 flex items-center gap-2 text-emerald-900">
+        <span class="w-8 h-8 rounded-full bg-emerald-900 text-gold-300 flex items-center justify-center font-extrabold shadow-md">1</span>
         <span>Quick Lead</span>
       </div>
-      <div class="w-12 h-0.5 bg-emerald-700"></div>
-      <div class="step-badge step-2 flex items-center gap-2 text-emerald-400 opacity-60">
-        <span class="w-7 h-7 rounded-full bg-emerald-800 text-white flex items-center justify-center font-extrabold">2</span>
+      <div class="w-12 h-0.5 bg-slate-300"></div>
+      <div class="step-badge step-2 flex items-center gap-2 text-slate-400 opacity-60">
+        <span class="w-8 h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-extrabold">2</span>
         <span>Detail Data</span>
       </div>
-      <div class="w-12 h-0.5 bg-emerald-700"></div>
-      <div class="step-badge step-3 flex items-center gap-2 text-emerald-400 opacity-60">
-        <span class="w-7 h-7 rounded-full bg-emerald-800 text-white flex items-center justify-center font-extrabold">3</span>
+      <div class="w-12 h-0.5 bg-slate-300"></div>
+      <div class="step-badge step-3 flex items-center gap-2 text-slate-400 opacity-60">
+        <span class="w-8 h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-extrabold">3</span>
         <span>Kartu Digital</span>
       </div>
     </div>
 
     <!-- Main Multi-step Form Card -->
-    <div class="mt-8 bg-emerald-900/90 border-2 border-gold-400/40 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+    <div class="mt-8 bg-white border border-slate-200 rounded-[2rem] p-6 sm:p-10 shadow-xl relative">
 
       <!-- STEP 1: Quick Lead Capture -->
       <form id="form-step-1" class="space-y-6">
-        <div class="border-b border-emerald-800 pb-4">
-          <h3 class="text-xl font-bold font-serif text-gold-300">Tahap 1: Informasi Kontak Utama</h3>
-          <p class="text-xs text-emerald-200 mt-1">Isi data minimal di bawah ini agar kontak Anda langsung tersimpan di sistem PSB PPBH.</p>
+        <div class="border-b border-slate-100 pb-4">
+          <h3 class="text-xl font-bold font-serif text-emerald-950">Tahap 1: Informasi Kontak Utama</h3>
+          <p class="text-xs text-slate-500 mt-1">Isi data minimal di bawah ini agar kontak Anda langsung tersimpan di sistem PSB PPBH.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Nama Lengkap Calon Santri / Siswa *</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Nama Lengkap Calon Santri / Siswa *</label>
             <input
               type="text"
               id="namaLengkap"
               required
               placeholder="Contoh: Muhammad Bahrul Ulum"
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-gold-400/30"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-700/20"
             />
           </div>
 
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Nomor WhatsApp Aktif Wali *</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Nomor WhatsApp Aktif Wali *</label>
             <input
               type="tel"
               id="nomorWa"
               required
               placeholder="Contoh: 081234567890"
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-gold-400/30"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-700/20"
             />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Pilihan Lembaga Formal *</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Pilihan Lembaga Formal *</label>
             <select
               id="lembagaPilihan"
               required
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold-400/30"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/20"
             >
               <option value="">-- Pilih Jenjang Sekolah --</option>
               {LEMBAGA_FORMAL.map(lembaga => (
@@ -88,11 +88,11 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
           </div>
 
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Pilihan Komplek Asrama *</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Pilihan Komplek Asrama *</label>
             <select
               id="komplekPilihan"
               required
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold-400/30"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/20"
             >
               <option value="">-- Pilih Komplek Asrama --</option>
               {KOMPLEK_ASRAMA.map(komplek => (
@@ -103,12 +103,12 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
         </div>
 
         <div class="pt-4 flex items-center justify-between">
-          <div class="text-[11px] text-emerald-300">
+          <div class="text-[11px] text-slate-500 font-medium">
             ✓ Biaya pendaftaran Rp 200.000 (Dapat dibayar via kantor/transfer)
           </div>
           <button
             type="submit"
-            class="bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 text-emerald-950 font-extrabold text-sm px-8 py-3.5 rounded-xl shadow-lg hover:shadow-gold-500/25 transition-all"
+            class="bg-emerald-900 hover:bg-emerald-950 text-white font-extrabold text-sm px-8 py-3.5 rounded-2xl shadow-lg hover:shadow-emerald-900/20 transition-all border border-gold-400/30"
           >
             Lanjut Tahap 2 & Simpan Lead ➔
           </button>
@@ -117,118 +117,121 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
 
       <!-- STEP 2: Detail Data -->
       <form id="form-step-2" class="hidden space-y-6">
-        <div class="border-b border-emerald-800 pb-4 flex items-center justify-between">
+        <div class="border-b border-slate-100 pb-4 flex items-center justify-between">
           <div>
-            <h3 class="text-xl font-bold font-serif text-gold-300">Tahap 2: Pengisian Data Berkas (KK/KTP)</h3>
-            <p class="text-xs text-emerald-200 mt-1">ID Pendaftaran sementara: <span id="temp-id-display" class="font-mono font-bold text-white">PPBH-2027-XXXX</span></p>
+            <h3 class="text-xl font-bold font-serif text-emerald-950">Tahap 2: Pengisian Data Berkas (KK/KTP)</h3>
+            <p class="text-xs text-slate-500 mt-1">ID Pendaftaran sementara: <span id="temp-id-display" class="font-mono font-bold text-emerald-900">PPBH-2027-XXXX</span></p>
           </div>
-          <button type="button" id="btn-back-step1" class="text-xs text-emerald-300 hover:text-white underline">
+          <button type="button" id="btn-back-step1" class="text-xs text-emerald-800 font-bold hover:underline">
             ← Kembali ke Step 1
           </button>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">NIK Calon Santri (Sesuai KK)</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">NIK Calon Santri (Sesuai KK)</label>
             <input
               type="text"
               id="nik"
               placeholder="16 Digit NIK"
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-600 focus:outline-none"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
             />
           </div>
 
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Nomor Kartu Keluarga (KK)</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Nomor Kartu Keluarga (KK)</label>
             <input
               type="text"
               id="nokk"
               placeholder="16 Digit Nomor KK"
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-600 focus:outline-none"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
             />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Nama Wali / Orang Tua</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Nama Wali / Orang Tua</label>
             <input
               type="text"
               id="namaOrangTua"
               placeholder="Nama Ayah / Ibu Kandung"
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-600 focus:outline-none"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
             />
           </div>
 
           <div class="space-y-2">
-            <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Sekolah / Asal Pendidikan</label>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Sekolah / Asal Pendidikan</label>
             <input
               type="text"
               id="sekolahAsal"
               placeholder="Contoh: MI Salafiyah / SD Negeri 1 Mojokerto"
-              class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-600 focus:outline-none"
+              class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
             />
           </div>
         </div>
 
         <div class="space-y-2">
-          <label class="block text-xs font-bold text-emerald-200 uppercase tracking-wider">Alamat Lengkap (Kabupaten / Kota)</label>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Alamat Lengkap (Kabupaten / Kota)</label>
           <textarea
             id="alamatLengkap"
             rows="2"
             placeholder="Dusun, Desa, Kecamatan, Kabupaten/Kota, Provinsi"
-            class="w-full bg-emerald-950 border border-emerald-700 focus:border-gold-400 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-600 focus:outline-none"
+            class="w-full bg-light-soft border border-slate-300 focus:border-emerald-700 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
           ></textarea>
         </div>
 
         <div class="pt-4 flex items-center justify-between">
-          <span class="text-xs text-emerald-300">Formulir online resmi Yayasan Ponpes Bidayatul Hidayah</span>
+          <span class="text-xs text-slate-500 font-medium">Formulir online resmi Yayasan Ponpes Bidayatul Hidayah</span>
           <button
             type="submit"
-            class="bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 text-emerald-950 font-extrabold text-sm px-8 py-3.5 rounded-xl shadow-lg hover:shadow-gold-500/25 transition-all"
+            class="bg-emerald-900 hover:bg-emerald-950 text-white font-extrabold text-sm px-8 py-3.5 rounded-2xl shadow-lg hover:shadow-emerald-900/20 transition-all border border-gold-400/30"
           >
             Selesaikan & Cetak Kartu Digital 🎯
           </button>
         </div>
       </form>
 
-      <!-- STEP 3: Digital Registration Card Pass (Success Screen) -->
+      <!-- STEP 3: Digital Pass Card -->
       <div id="form-step-3" class="hidden space-y-6">
         <div class="text-center space-y-2">
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-400 text-emerald-950 font-bold text-3xl shadow-lg">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-900 text-gold-300 font-bold text-3xl shadow-lg">
             ✓
           </div>
-          <h3 class="text-2xl font-extrabold font-serif text-gold-300">Pendaftaran Berhasil!</h3>
-          <p class="text-xs sm:text-sm text-emerald-100">Selamat, pendaftaran Anda di Yayasan Ponpes Bidayatul Hidayah telah tercatat dalam sistem.</p>
+          <h3 class="text-2xl font-extrabold font-serif text-emerald-950">Pendaftaran Berhasil!</h3>
+          <p class="text-xs sm:text-sm text-slate-600">Selamat, pendaftaran Anda di Yayasan Ponpes Bidayatul Hidayah telah tercatat dalam sistem.</p>
         </div>
 
         <!-- Digital Pass Card -->
-        <div class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 border-2 border-gold-400 rounded-2xl p-6 shadow-2xl relative overflow-hidden max-w-lg mx-auto space-y-4">
+        <div class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 border-2 border-gold-400/80 rounded-3xl p-6 shadow-2xl relative overflow-hidden max-w-lg mx-auto space-y-4 text-white">
           <div class="flex items-center justify-between border-b border-emerald-800 pb-3">
-            <div>
-              <div class="text-[10px] text-gold-400 font-bold uppercase tracking-widest">KARTU PENDAFTARAN DIGITAL</div>
-              <div class="text-sm font-extrabold text-white">PSB PPBH TP. {YAYASAN_INFO.tahunAjaran}</div>
+            <div class="flex items-center gap-3">
+              <img src={YAYASAN_INFO.logoUrl} alt="Logo" class="w-10 h-10 object-contain" />
+              <div>
+                <div class="text-[10px] text-gold-400 font-extrabold uppercase tracking-widest">KARTU PENDAFTARAN DIGITAL</div>
+                <div class="text-sm font-extrabold text-white">PSB PPBH TP. {YAYASAN_INFO.tahunAjaran}</div>
+              </div>
             </div>
-            <div class="bg-gold-500 text-emerald-950 px-2.5 py-1 rounded-lg font-mono font-bold text-xs" id="card-id">
+            <div class="bg-gold-500 text-emerald-950 px-3 py-1 rounded-xl font-mono font-bold text-xs shadow-sm" id="card-id">
               PPBH-2027-001
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-3 text-xs">
             <div>
-              <span class="text-emerald-400 block text-[10px]">NAMA SANTRI:</span>
+              <span class="text-emerald-400 block text-[10px] uppercase font-bold">NAMA SANTRI:</span>
               <span class="font-bold text-white text-sm" id="card-nama">-</span>
             </div>
             <div>
-              <span class="text-emerald-400 block text-[10px]">NO. WHATSAPP WALI:</span>
+              <span class="text-emerald-400 block text-[10px] uppercase font-bold">NO. WHATSAPP WALI:</span>
               <span class="font-bold text-white" id="card-wa">-</span>
             </div>
             <div>
-              <span class="text-emerald-400 block text-[10px]">LEMBAGA FORMAL:</span>
+              <span class="text-emerald-400 block text-[10px] uppercase font-bold">LEMBAGA FORMAL:</span>
               <span class="font-bold text-gold-300" id="card-lembaga">-</span>
             </div>
             <div>
-              <span class="text-emerald-400 block text-[10px]">KOMPLEK ASRAMA:</span>
+              <span class="text-emerald-400 block text-[10px] uppercase font-bold">KOMPLEK ASRAMA:</span>
               <span class="font-bold text-gold-300" id="card-komplek">-</span>
             </div>
           </div>
@@ -238,8 +241,7 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
               <span>Mojogeneng, Jatirejo, Mojokerto</span>
               <div class="text-[10px] text-emerald-400">Harap tunjukkan kartu ini saat verifikasi tes</div>
             </div>
-            <!-- Simulated QR Code -->
-            <div class="w-12 h-12 bg-white p-1 rounded-lg flex items-center justify-center text-[8px] text-black font-mono font-bold text-center border border-gold-400">
+            <div class="w-12 h-12 bg-white p-1 rounded-xl flex items-center justify-center text-[8px] text-black font-mono font-bold text-center border border-gold-400 shadow-inner">
               [QR VERIFY]
             </div>
           </div>
@@ -251,13 +253,13 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
             id="link-wa-panitia"
             href="#"
             target="_blank"
-            class="w-full sm:w-auto bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all text-center flex items-center justify-center gap-2 border border-gold-400/40"
+            class="w-full sm:w-auto bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-sm px-6 py-3.5 rounded-2xl transition-all text-center flex items-center justify-center gap-2 border border-gold-400/40 shadow-md"
           >
             <span>💬 Konfirmasi via WA Panitia</span>
           </a>
           <button
             onclick="window.print()"
-            class="w-full sm:w-auto bg-gold-400 hover:bg-gold-500 text-emerald-950 font-extrabold text-sm px-6 py-3.5 rounded-xl transition-all text-center"
+            class="w-full sm:w-auto bg-gold-400 hover:bg-gold-500 text-emerald-950 font-extrabold text-sm px-6 py-3.5 rounded-2xl transition-all text-center shadow-md"
           >
             🖨️ Cetak / Simpan Kartu PDF
           </button>
@@ -298,13 +300,11 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
     currentLeadId = res.id;
     (document.getElementById('temp-id-display') as HTMLElement).innerText = currentLeadId;
 
-    // Transition UI to Step 2
     step1Form.classList.add('hidden');
     step2Form.classList.remove('hidden');
 
-    // Update Step Indicator
     document.querySelector('.step-2')?.classList.remove('opacity-60');
-    document.querySelector('.step-2')?.classList.add('text-gold-300');
+    document.querySelector('.step-2')?.classList.add('text-emerald-900');
   });
 
   btnBackStep1?.addEventListener('click', () => {
@@ -339,23 +339,19 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
       alamatLengkap: alamat
     });
 
-    // Populate Card
     (document.getElementById('card-id') as HTMLElement).innerText = currentLeadId;
     (document.getElementById('card-nama') as HTMLElement).innerText = nama;
     (document.getElementById('card-wa') as HTMLElement).innerText = wa;
     (document.getElementById('card-lembaga') as HTMLElement).innerText = lembaga;
     (document.getElementById('card-komplek') as HTMLElement).innerText = komplek;
 
-    // Set WA Link
     const waText = encodeURIComponent(`Assalamu'alaikum Panitia PSB PPBH, saya telah mendaftar online.\n*ID Pendaftaran:* ${currentLeadId}\n*Nama:* ${nama}\n*Lembaga:* ${lembaga}\n*Komplek:* ${komplek}`);
     (document.getElementById('link-wa-panitia') as HTMLAnchorElement).href = `https://wa.me/6281252304644?text=${waText}`;
 
-    // Transition UI to Step 3
     step2Form.classList.add('hidden');
     step3Container.classList.remove('hidden');
 
-    // Update Step Indicator
     document.querySelector('.step-3')?.classList.remove('opacity-60');
-    document.querySelector('.step-3')?.classList.add('text-gold-300');
+    document.querySelector('.step-3')?.classList.add('text-emerald-900');
   });
 </script>
