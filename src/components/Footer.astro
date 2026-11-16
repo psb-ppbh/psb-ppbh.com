@@ -1,0 +1,94 @@
+---
+import { YAYASAN_INFO } from '../data/psbData';
+---
+
+<footer class="bg-emerald-950 text-white pt-16 pb-12 border-t border-emerald-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+
+      <!-- Brand & Info -->
+      <div class="lg:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gold-500 text-emerald-950 flex items-center justify-center font-bold font-arabic text-xl">
+            BH
+          </div>
+          <div>
+            <div class="text-xs text-gold-400 font-bold uppercase tracking-wider">Yayasan Ponpes</div>
+            <div class="text-lg font-extrabold text-white font-serif">Bidayatul Hidayah</div>
+          </div>
+        </div>
+
+        <p class="text-xs text-emerald-200 leading-relaxed max-w-sm">
+          Pondok Pesantren Bidayatul Hidayah Mojogeneng Jatirejo Mojokerto. Mendidik generasi salaf & modern berkhlaqul karimah sejak tahun 1948.
+        </p>
+
+        <div class="pt-2 text-xs text-emerald-300 space-y-1">
+          <div><strong class="text-gold-300">Pengasuh:</strong> KH. Agus Salim Yahdi & Kiai Nur Hasan</div>
+          <div><strong class="text-gold-300">Pendiri:</strong> KH. Moh. Yahdi Mathlab (Alm)</div>
+        </div>
+      </div>
+
+      <!-- Quick Nav Links -->
+      <div class="lg:col-span-3 space-y-3 text-xs">
+        <div class="font-bold text-gold-400 uppercase tracking-wider text-sm mb-4">Navigasi Halaman</div>
+        <div><a href="#profil" class="text-emerald-200 hover:text-white transition-colors">Profil & Sejarah (1948)</a></div>
+        <div><a href="#lembaga" class="text-emerald-200 hover:text-white transition-colors">5 Lembaga Formal</a></div>
+        <div><a href="#komplek" class="text-emerald-200 hover:text-white transition-colors">14 Komplek Asrama</a></div>
+        <div><a href="#syarat" class="text-emerald-200 hover:text-white transition-colors">Syarat & Alur Pendaftaran</a></div>
+        <div><a href="#forum" class="text-emerald-200 hover:text-white transition-colors">Forum Tanya Jawab Q&A</a></div>
+      </div>
+
+      <!-- Contact & Address -->
+      <div class="lg:col-span-4 space-y-3 text-xs">
+        <div class="font-bold text-gold-400 uppercase tracking-wider text-sm mb-4">Kantor Offline & Kontak</div>
+
+        <div class="flex items-start gap-2.5 text-emerald-200">
+          <span class="text-gold-400 text-sm">📍</span>
+          <div>
+            <strong class="text-white block">Kantor Yayasan Bidayatul Hidayah</strong>
+            <span>{YAYASAN_INFO.alamat}</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5 text-emerald-200 pt-1">
+          <span class="text-gold-400 text-sm">🕒</span>
+          <div>
+            <strong class="text-white block">Jam Layanan Kantor:</strong>
+            <span>{YAYASAN_INFO.jamBuka}</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5 text-emerald-200 pt-1">
+          <span class="text-gold-400 text-sm">💬</span>
+          <div>
+            <strong class="text-white block">WhatsApp Pendaftaran:</strong>
+            <a href={`https://wa.me/62${YAYASAN_INFO.teleponWA.substring(1)}`} target="_blank" class="text-gold-300 hover:underline">
+              {YAYASAN_INFO.teleponWAFormatted}
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5 text-emerald-200 pt-1">
+          <span class="text-gold-400 text-sm">📷</span>
+          <div>
+            <strong class="text-white block">Instagram Resmi:</strong>
+            <a href={YAYASAN_INFO.instagramUrl} target="_blank" class="text-gold-300 hover:underline">
+              {YAYASAN_INFO.instagram}
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="mt-12 pt-6 border-t border-emerald-900 text-center text-[11px] text-emerald-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2027 Yayasan Pondok Pesantren Bidayatul Hidayah Mojogeneng. All Rights Reserved.
+      </div>
+      <div class="text-emerald-500">
+        PSB Single Gateway TP. {YAYASAN_INFO.tahunAjaran}
+      </div>
+    </div>
+  </div>
+</footer>

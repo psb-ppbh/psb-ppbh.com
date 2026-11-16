@@ -1,0 +1,97 @@
+---
+import { KOMPLEK_ASRAMA } from '../data/psbData';
+---
+
+<section id="komplek" class="py-20 bg-cream-50 text-slate-800 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <span class="inline-block px-4 py-1.5 bg-emerald-800/10 text-emerald-800 rounded-full text-xs font-extrabold uppercase tracking-widest">
+        Hunian Santri Berkah
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 font-serif">
+        14 Komplek Asrama Pesantren
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base">
+        Fasilitas hunian terpisah untuk santri putra dan putri, dilengkapi komplek khusus Tahfidzul Qur'an & pembinaan karakter.
+      </p>
+      <div class="w-20 h-1.5 bg-gold-500 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="mt-8 flex flex-wrap justify-center gap-2" id="komplek-filter-btns">
+      <button data-filter="all" class="px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all bg-emerald-800 text-white shadow-md">Semua (14 Komplek)</button>
+      <button data-filter="Putra" class="px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 hover:bg-emerald-50 border border-slate-200">Asrama Putra</button>
+      <button data-filter="Putri" class="px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 hover:bg-emerald-50 border border-slate-200">Asrama Putri</button>
+      <button data-filter="Tahfidz" class="px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all bg-white text-slate-700 hover:bg-emerald-50 border border-slate-200">Komplek Tahfidz</button>
+    </div>
+
+    <!-- Komplek Grid -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="komplek-grid">
+      {KOMPLEK_ASRAMA.map(komplek => (
+        <div
+          class="komplek-card bg-white p-6 rounded-3xl border border-sage-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-emerald-600 flex flex-col justify-between"
+          data-kategori={komplek.kategori}
+        >
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200">
+                Komplek #{komplek.id}
+              </span>
+              <span class={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                komplek.kategori === 'Putra' ? 'bg-blue-100 text-blue-800' :
+                komplek.kategori === 'Putri' ? 'bg-pink-100 text-pink-800' :
+                komplek.kategori === 'Tahfidz' ? 'bg-amber-100 text-amber-900 border border-amber-300 font-extrabold' :
+                'bg-emerald-100 text-emerald-800'
+              }`}>
+                {komplek.kategori}
+              </span>
+            </div>
+
+            <h3 class="text-lg font-bold text-emerald-950 font-serif">
+              {komplek.nama}
+            </h3>
+
+            <p class="text-xs text-slate-600 leading-relaxed">
+              {komplek.deskripsi}
+            </p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-emerald-700 font-semibold flex items-center justify-between">
+            <span>PPBH Mojogeneng</span>
+            <span class="text-slate-400">Terbuka untuk Santri Baru</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const btns = document.querySelectorAll('#komplek-filter-btns button');
+  const cards = document.querySelectorAll('.komplek-card');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active state
+      btns.forEach(b => {
+        b.classList.remove('bg-emerald-800', 'text-white', 'shadow-md');
+        b.classList.add('bg-white', 'text-slate-700');
+      });
+      btn.classList.remove('bg-white', 'text-slate-700');
+      btn.classList.add('bg-emerald-800', 'text-white', 'shadow-md');
+
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach(card => {
+        const kat = card.getAttribute('data-kategori');
+        if (filter === 'all' || kat === filter) {
+          (card as HTMLElement).style.display = 'flex';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
