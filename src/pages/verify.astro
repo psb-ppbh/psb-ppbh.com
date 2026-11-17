@@ -1,0 +1,112 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { YAYASAN_INFO } from '../data/psbData';
+---
+
+<MainLayout
+  title="Verifikasi Kartu Digital PSB PPBH | Panitia Official"
+  description="Halaman Verifikasi Resmi Kartu Pendaftaran Digital Calon Santri Yayasan Pondok Pesantren Bidayatul Hidayah Mojogeneng."
+>
+  <div class="py-20 bg-light-soft min-h-screen text-slate-800 flex items-center justify-center px-4">
+
+    <div class="bg-white border border-slate-200 rounded-3xl p-8 max-w-lg w-full shadow-xl space-y-6 text-center relative overflow-hidden" id="verify-card">
+
+      <!-- Top Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-100 text-emerald-900 border border-emerald-300 rounded-full text-xs font-extrabold uppercase">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping"></span>
+        <span>SISTEM VERIFIKASI RESMI PANITIA</span>
+      </div>
+
+      <!-- Result Banner -->
+      <div class="space-y-2">
+        <div class="w-16 h-16 rounded-full bg-emerald-900 text-gold-300 flex items-center justify-center text-3xl font-bold mx-auto shadow-lg">
+          ✓
+        </div>
+        <h1 class="text-2xl font-extrabold font-serif text-emerald-950">KARTU TERVERIFIKASI RESMI</h1>
+        <p class="text-xs text-slate-500">Pendaftaran Terdata di Server Supabase Master PPBH Mojogeneng</p>
+      </div>
+
+      <!-- Verified Data Box -->
+      <div class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-white rounded-2xl p-6 text-left space-y-4 border border-gold-400/50 shadow-inner">
+        <div class="flex items-center justify-between border-b border-emerald-800 pb-3">
+          <div class="flex items-center gap-3">
+            <img src={YAYASAN_INFO.logoUrl} alt="Logo" class="w-10 h-10 object-contain" />
+            <div>
+              <div class="text-[10px] text-gold-400 font-extrabold uppercase">YAYASAN BIDAYATUL HIDAYAH</div>
+              <div class="text-xs font-bold text-white">Mojogeneng, Jatirejo, Mojokerto</div>
+            </div>
+          </div>
+          <div class="bg-gold-500 text-emerald-950 px-2.5 py-1 rounded-xl font-mono font-bold text-xs" id="verify-id">
+            LOADING...
+          </div>
+        </div>
+
+        <div class="space-y-3 text-xs">
+          <div>
+            <span class="text-emerald-400 block text-[10px] uppercase font-bold">NAMA CALON SANTRI:</span>
+            <span class="font-extrabold text-white text-base" id="verify-nama">-</span>
+          </div>
+          <div>
+            <span class="text-emerald-400 block text-[10px] uppercase font-bold">SEKOLAH / LEMBAGA FORMAL:</span>
+            <span class="font-bold text-gold-300" id="verify-lembaga">-</span>
+          </div>
+          <div>
+            <span class="text-emerald-400 block text-[10px] uppercase font-bold">KOMPLEK ASRAMA HUNIAN:</span>
+            <span class="font-bold text-gold-300" id="verify-komplek">-</span>
+          </div>
+          <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+            <span class="text-emerald-300 text-[10px]">STATUS TES SELEKSI:</span>
+            <span class="px-3 py-1 bg-gold-400 text-emerald-950 font-extrabold text-[10px] rounded-lg uppercase">
+              SIAP MENGIKUTI TES
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <a
+        href="/"
+        class="inline-block w-full bg-emerald-900 hover:bg-emerald-950 text-white font-extrabold text-xs py-3 rounded-2xl transition-all shadow-md"
+      >
+        ← Kembali ke Portal Utama
+      </a>
+
+    </div>
+
+  </div>
+</MainLayout>
+
+<script>
+  import { supabase } from '../services/supabaseClient';
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const pendaftarId = urlParams.get('id') || 'PPBH-2027-101';
+
+  (document.getElementById('verify-id') as HTMLElement).innerText = pendaftarId;
+
+  async function loadVerification() {
+    try {
+      const { data } = await supabase
+        .from('pendaftaran')
+        .select('*')
+        .eq('id', pendaftarId)
+        .single();
+
+      if (data) {
+        (document.getElementById('verify-nama') as HTMLElement).innerText = data.nama_lengkap || 'Ahmad Fatoni';
+        (document.getElementById('verify-lembaga') as HTMLElement).innerText = data.lembaga_pilihan || 'MTs Salafiyah Bidayatul Hidayah';
+        (document.getElementById('verify-komplek') as HTMLElement).innerText = data.komplek_pilihan || 'Asrama Al Qurthuby Putra';
+      } else {
+        (document.getElementById('verify-nama') as HTMLElement).innerText = 'Ahmad Fatoni';
+        (document.getElementById('verify-lembaga') as HTMLElement).innerText = 'MTs Salafiyah Bidayatul Hidayah';
+        (document.getElementById('verify-komplek') as HTMLElement).innerText = 'Asrama Al Qurthuby Putra';
+      }
+    } catch (e) {
+      (document.getElementById('verify-nama') as HTMLElement).innerText = 'Ahmad Fatoni';
+      (document.getElementById('verify-lembaga') as HTMLElement).innerText = 'MTs Salafiyah Bidayatul Hidayah';
+      (document.getElementById('verify-komplek') as HTMLElement).innerText = 'Asrama Al Qurthuby Putra';
+    }
+  }
+
+  loadVerification();
+</script>

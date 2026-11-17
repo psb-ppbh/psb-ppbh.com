@@ -1,4 +1,4 @@
--- SQL Schema setup untuk Database Supabase PSB PPBH Mojogeneng 2027/2028
+-- SQL Schema Master setup untuk Database Supabase PSB PPBH Mojogeneng 2027/2028
 
 -- 1. Tabel Pendaftaran Santri & Siswa Baru
 CREATE TABLE IF NOT EXISTS public.pendaftaran (
@@ -27,15 +27,25 @@ CREATE TABLE IF NOT EXISTS public.forum_diskusi (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
 );
 
+-- 3. Tabel Forum Internal 5 Admin Panitia (HP Admin <-> HP Admin)
+CREATE TABLE IF NOT EXISTS public.forum_admin_internal (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nama_admin TEXT NOT NULL,
+    pesan TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
+);
+
 -- Enable Row Level Security (RLS)
 ALTER TABLE public.pendaftaran ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.forum_diskusi ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.forum_admin_internal ENABLE ROW LEVEL SECURITY;
 
--- Allow Public Insert & Read Policies
-CREATE POLICY "Allow public insert pendaftaran" ON public.pendaftaran FOR INSERT WITH CHECK (true);
-CREATE POLICY "Allow public select pendaftaran" ON public.pendaftaran FOR SELECT USING (true);
-CREATE POLICY "Allow public update pendaftaran" ON public.pendaftaran FOR UPDATE USING (true);
+-- Drop Policy lama jika sudah ada agar tidak terjadi error "already exists"
+DROP POLICY IF EXISTS "Public pendaftaran" ON public.pendaftaran;
+DROP POLICY IF EXISTS "Public forum" ON public.forum_diskusi;
+DROP POLICY IF EXISTS "Public forum_admin" ON public.forum_admin_internal;
 
-CREATE POLICY "Allow public insert forum" ON public.forum_diskusi FOR INSERT WITH CHECK (true);
-CREATE POLICY "Allow public select forum" ON public.forum_diskusi FOR SELECT USING (true);
-CREATE POLICY "Allow public update forum" ON public.forum_diskusi FOR UPDATE USING (true);
+-- Allow Public Access Policies
+CREATE POLICY "Public pendaftaran" ON public.pendaftaran FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public forum" ON public.forum_diskusi FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public forum_admin" ON public.forum_admin_internal FOR ALL USING (true) WITH CHECK (true);
