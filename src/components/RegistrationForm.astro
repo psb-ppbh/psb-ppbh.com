@@ -28,12 +28,12 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
       </div>
       <div class="w-6 sm:w-12 h-0.5 bg-slate-300"></div>
       <div class="step-badge step-2 flex items-center gap-1.5 sm:gap-2 text-slate-400 opacity-60">
-        <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-extrabold shrink-0">2</span>
-        <span>Detail & Dokumen</span>
+        <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-extrabold shrink-0" id="badge-num-2">2</span>
+        <span>Detail Data</span>
       </div>
       <div class="w-6 sm:w-12 h-0.5 bg-slate-300"></div>
       <div class="step-badge step-3 flex items-center gap-1.5 sm:gap-2 text-slate-400 opacity-60">
-        <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-extrabold shrink-0">3</span>
+        <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-extrabold shrink-0" id="badge-num-3">3</span>
         <span>Kartu Digital</span>
       </div>
     </div>
@@ -110,16 +110,16 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
             type="submit"
             class="w-full sm:w-auto bg-emerald-900 hover:bg-emerald-950 text-white font-extrabold text-xs sm:text-sm px-8 py-3.5 rounded-2xl shadow-lg hover:shadow-emerald-900/20 transition-all border border-gold-400/30"
           >
-            Lanjut Tahap 2 & Simpan Lead ➔
+            Lanjut Tahap 2 & Pengisian Data ➔
           </button>
         </div>
       </form>
 
-      <!-- STEP 2: Detail Data & Unggah Dokumen Soft-File -->
+      <!-- STEP 2: Detail Data Berkas (KK/KTP) -->
       <form id="form-step-2" class="hidden space-y-5 sm:space-y-6">
         <div class="border-b border-slate-100 pb-3 sm:pb-4 flex items-center justify-between">
           <div>
-            <h3 class="text-lg sm:text-xl font-bold font-serif text-emerald-950">Tahap 2: Pengisian Data & Unggah Dokumen</h3>
+            <h3 class="text-lg sm:text-xl font-bold font-serif text-emerald-950">Tahap 2: Pengisian Data Lengkap Berkas (KK/KTP)</h3>
             <p class="text-xs text-slate-500 mt-1">ID Pendaftaran sementara: <span id="temp-id-display" class="font-mono font-bold text-emerald-900">PPBH-2027-XXXX</span></p>
           </div>
           <button type="button" id="btn-back-step1" class="text-xs text-emerald-800 font-bold hover:underline">
@@ -181,39 +181,9 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
           ></textarea>
         </div>
 
-        <!-- Single Unified List for Soft-File Uploads with Auto-Compression -->
-        <div class="pt-2 space-y-3 bg-emerald-50/70 p-4 sm:p-6 rounded-2xl border border-emerald-200">
-          <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
-            <h4 class="text-xs sm:text-sm font-extrabold text-emerald-950 flex items-center gap-1.5">
-              <span>📂</span> Unggah Berkas Dokumen Soft-File (Otomatis Ter-kompresi ~100 KB)
-            </h4>
-            <span class="text-[10px] bg-emerald-900 text-gold-300 px-2 py-0.5 rounded font-extrabold">Auto-Compress</span>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div class="bg-white p-3 rounded-xl border border-slate-200 space-y-1">
-              <label class="block font-bold text-slate-800">1. Pas Foto 3x4 Santri</label>
-              <input type="file" id="filePasFoto" accept="image/*" class="w-full text-[11px] text-slate-600" />
-            </div>
-
-            <div class="bg-white p-3 rounded-xl border border-slate-200 space-y-1">
-              <label class="block font-bold text-slate-800">2. Bukti Transfer Rp 200.000</label>
-              <input type="file" id="fileBuktiBayar" accept="image/*" class="w-full text-[11px] text-slate-600" />
-            </div>
-
-            <div class="bg-white p-3 rounded-xl border border-slate-200 space-y-1">
-              <label class="block font-bold text-slate-800">3. Foto Kartu Keluarga (KK)</label>
-              <input type="file" id="fileKK" accept="image/*" class="w-full text-[11px] text-slate-600" />
-            </div>
-
-            <div class="bg-white p-3 rounded-xl border border-slate-200 space-y-1">
-              <label class="block font-bold text-slate-800">4. Foto KTP Ayah / Ibu</label>
-              <input type="file" id="fileKTP" accept="image/*" class="w-full text-[11px] text-slate-600" />
-            </div>
-          </div>
-          <div class="text-[10px] text-emerald-800 italic">
-            * Seluruh foto di atas otomatis dikompresi di browser Anda tanpa membebani memori HP & kuota. Dokumen fisik fotocopy 3 lembar tetap diserahkan saat tes seleksi.
-          </div>
+        <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-2xl text-xs text-emerald-950 flex items-center gap-2">
+          <span>ℹ️</span>
+          <span>Berkas fisik fotocopy KK, KTP Ortu, Ijazah/SKHUN (3 lembar) diserahkan saat tes seleksi di Kampus PPBH.</span>
         </div>
 
         <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -222,7 +192,7 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
             type="submit"
             class="w-full sm:w-auto bg-emerald-900 hover:bg-emerald-950 text-white font-extrabold text-xs sm:text-sm px-8 py-3.5 rounded-2xl shadow-lg hover:shadow-emerald-900/20 transition-all border border-gold-400/30"
           >
-            Selesaikan & Cetak Kartu Digital 🎯
+            Selesaikan & Terbitkan Kartu Digital 🎯
           </button>
         </div>
       </form>
@@ -255,19 +225,19 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
           <div class="grid grid-cols-2 gap-3 text-xs">
             <div>
               <span class="text-emerald-400 block text-[9px] uppercase font-bold">NAMA SANTRI:</span>
-              <span class="font-bold text-white text-xs sm:text-sm" id="card-nama">ahmad fatoni</span>
+              <span class="font-bold text-white text-xs sm:text-sm" id="card-nama">-</span>
             </div>
             <div>
               <span class="text-emerald-400 block text-[9px] uppercase font-bold">NO. WHATSAPP WALI:</span>
-              <span class="font-bold text-white" id="card-wa">0812345679</span>
+              <span class="font-bold text-white" id="card-wa">-</span>
             </div>
             <div>
               <span class="text-emerald-400 block text-[9px] uppercase font-bold">LEMBAGA FORMAL:</span>
-              <span class="font-bold text-gold-300" id="card-lembaga">MTs Salafiyah Bidayatul Hidayah</span>
+              <span class="font-bold text-gold-300" id="card-lembaga">-</span>
             </div>
             <div>
               <span class="text-emerald-400 block text-[9px] uppercase font-bold">KOMPLEK ASRAMA:</span>
-              <span class="font-bold text-gold-300" id="card-komplek">Asrama Al Qurthuby Putra</span>
+              <span class="font-bold text-gold-300" id="card-komplek">-</span>
             </div>
           </div>
 
@@ -324,6 +294,9 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
   const step3Container = document.getElementById('form-step-3') as HTMLDivElement;
   const btnBackStep1 = document.getElementById('btn-back-step1');
   const btnPrintCard = document.getElementById('btn-print-card-only');
+
+  const badge2 = document.getElementById('badge-num-2');
+  const badge3 = document.getElementById('badge-num-3');
 
   btnPrintCard?.addEventListener('click', () => {
     const cardElem = document.getElementById('digital-card-print');
@@ -393,6 +366,7 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
     printWin.document.close();
   });
 
+  // TAHAP 1 SUBMIT -> Wajib ke TAHAP 2 (Tidak langsung ke Tahap 3)
   step1Form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -411,18 +385,27 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
     currentLeadId = res.id;
     (document.getElementById('temp-id-display') as HTMLElement).innerText = currentLeadId;
 
+    // Sembunyikan Step 1, Tampilkan HANYA Step 2
     step1Form.classList.add('hidden');
     step2Form.classList.remove('hidden');
+    step3Container.classList.add('hidden');
 
+    // Update Indikator Progress
     document.querySelector('.step-2')?.classList.remove('opacity-60');
     document.querySelector('.step-2')?.classList.add('text-emerald-900');
+    if (badge2) {
+      badge2.classList.remove('bg-slate-200', 'text-slate-600');
+      badge2.classList.add('bg-emerald-900', 'text-gold-300');
+    }
   });
 
   btnBackStep1?.addEventListener('click', () => {
     step2Form.classList.add('hidden');
+    step3Container.classList.add('hidden');
     step1Form.classList.remove('hidden');
   });
 
+  // TAHAP 2 SUBMIT -> Baru terbit TAHAP 3 (Kartu Digital)
   step2Form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -463,10 +446,17 @@ import { LEMBAGA_FORMAL, KOMPLEK_ASRAMA, YAYASAN_INFO } from '../data/psbData';
     const waText = encodeURIComponent(`Assalamu'alaikum Panitia PSB PPBH, saya telah mendaftar online.\n*ID Pendaftaran:* ${currentLeadId}\n*Nama:* ${nama}\n*Lembaga:* ${lembaga}\n*Komplek:* ${komplek}`);
     (document.getElementById('link-wa-panitia') as HTMLAnchorElement).href = `https://wa.me/6281252304644?text=${waText}`;
 
+    // Sembunyikan Step 2, Tampilkan Step 3 (Kartu Digital)
     step2Form.classList.add('hidden');
+    step1Form.classList.add('hidden');
     step3Container.classList.remove('hidden');
 
+    // Update Indikator Progress
     document.querySelector('.step-3')?.classList.remove('opacity-60');
     document.querySelector('.step-3')?.classList.add('text-emerald-900');
+    if (badge3) {
+      badge3.classList.remove('bg-slate-200', 'text-slate-600');
+      badge3.classList.add('bg-emerald-900', 'text-gold-300');
+    }
   });
 </script>
