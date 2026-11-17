@@ -159,7 +159,7 @@ export const LINI_MASA_HISTORY: LiniMasaHistory[] = [
   },
   {
     tahun: '2010-an',
-    judul: 'Pendirian SMK DKV & Perluasan 14 Komplek',
+    judul: 'Perluasan 14 Komplek Asrama, Infrastruktur Terpadu Hingga Pendirian SMK DKV',
     deskripsi: 'Pendirian SMK Bidayatul Hidayah konsentrasi Desain Komunikasi Visual (DKV) dan perluasan hunian santri hingga mencapai 14 Komplek Asrama.',
     badge: 'Era Kreatif'
   },
