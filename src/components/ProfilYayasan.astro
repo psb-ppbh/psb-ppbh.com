@@ -1,5 +1,12 @@
 ---
 import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } from '../data/psbData';
+
+const GALERI_POTRET = [
+  { url: '/galeri-1.png', caption: 'Kajian & Zikir Santri' },
+  { url: '/galeri-2.png', caption: 'Sholat Berjamaah' },
+  { url: '/galeri-3.png', caption: 'Pendalaman Kitab Salaf' },
+  { url: '/galeri-4.png', caption: 'Lansekap Asri PPBH' },
+];
 ---
 
 <section id="profil" class="py-16 sm:py-20 bg-white text-slate-800 relative">
@@ -19,11 +26,11 @@ import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } fr
       <div class="w-16 h-1 bg-gold-500 mx-auto rounded-full"></div>
     </div>
 
-    <!-- Sejarah Narrative & Real Photo Gallery Grid -->
+    <!-- Sejarah Narrative & 4-Portrait Photo Frame Gallery -->
     <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
       <!-- Sejarah Narrative Card -->
-      <div class="lg:col-span-7 bg-light-soft p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div class="lg:col-span-6 bg-light-soft p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
         <div class="space-y-4 text-slate-700 leading-relaxed text-xs sm:text-base">
           <div class="flex items-center gap-3 mb-2">
             <img src={YAYASAN_INFO.logoUrl} alt="Logo" class="w-10 h-10 object-contain shrink-0" />
@@ -57,38 +64,50 @@ import { YAYASAN_INFO, KEGIATAN_SANTRI, EKSTRAKURIKULER, LEMBAGA_NON_FORMAL } fr
         </div>
       </div>
 
-      <!-- Real Photo Card & Pengasuh Honor -->
-      <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+      <!-- 4 Portrait Photos Side-By-Side in 1 Frame Card & Pengasuh Honor -->
+      <div class="lg:col-span-6 space-y-6 flex flex-col justify-between">
 
-        <!-- Real Photo Frame -->
-        <div class="relative rounded-3xl overflow-hidden shadow-md border border-slate-200 group h-56 sm:h-72">
-          <img
-            src={YAYASAN_INFO.fotoKegiatanUrl}
-            alt="Kegiatan Santri Bidayatul Hidayah"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/85 via-emerald-950/20 to-transparent flex items-end p-5">
-            <div class="text-white space-y-1">
-              <span class="px-2.5 py-0.5 bg-gold-500 text-emerald-950 text-[10px] font-extrabold rounded uppercase">
-                Suasana Pesantren
-              </span>
-              <h3 class="text-sm sm:text-base font-bold font-serif">Kajian & Pembinaan Akhlak Santri</h3>
-              <p class="text-[11px] text-emerald-200">Mojogeneng, Jatirejo, Mojokerto</p>
-            </div>
+        <!-- 4-Portrait Photo Frame Box -->
+        <div class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 p-4 sm:p-5 rounded-3xl border-2 border-gold-400/60 shadow-xl space-y-3">
+          <div class="flex items-center justify-between border-b border-emerald-800 pb-2.5">
+            <span class="px-2.5 py-1 bg-gold-400 text-emerald-950 text-[10px] font-extrabold rounded-md uppercase tracking-wider">
+              Dokumentasi Otentik PPBH
+            </span>
+            <span class="text-[11px] text-emerald-300 font-medium">Mojogeneng, Mojokerto</span>
+          </div>
+
+          <!-- 4 Portrait Photos Grid (4 Column Side-By-Side) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {GALERI_POTRET.map((foto, idx) => (
+              <div class="relative group rounded-2xl overflow-hidden border border-emerald-700/80 aspect-[3/5] bg-emerald-900">
+                <img
+                  src={foto.url}
+                  alt={foto.caption}
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2 text-center">
+                  <span class="text-[9px] font-bold text-gold-300 leading-tight w-full">{foto.caption}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="text-[10px] text-emerald-300 text-center font-medium pt-1">
+            4 Potret Kehidupan, Ibadah, & Lanskap Asri Pesantren Bidayatul Hidayah
           </div>
         </div>
 
         <!-- Pengasuh Brief Box -->
-        <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-gold-400/40 space-y-3">
+        <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-5 sm:p-6 rounded-3xl shadow-xl border border-gold-400/40 space-y-3">
           <div class="text-[10px] text-gold-300 font-extrabold uppercase tracking-widest">Amanah Kepengasuhan</div>
-          <div class="space-y-2.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="bg-emerald-900/90 p-3 rounded-2xl border border-emerald-700">
               <div class="text-[9px] text-emerald-300 uppercase font-bold">PENDIRI PONPES (1948)</div>
-              <div class="text-xs sm:text-sm font-bold text-gold-300">{YAYASAN_INFO.pendiri}</div>
+              <div class="text-xs font-bold text-gold-300">{YAYASAN_INFO.pendiri}</div>
             </div>
             <div class="bg-emerald-900/90 p-3 rounded-2xl border border-emerald-700">
               <div class="text-[9px] text-emerald-300 uppercase font-bold">PENGASUH PONPES</div>
-              <div class="text-xs sm:text-sm font-bold text-white">KH. Agus Salim Yahdi & Kiai Nur Hasan</div>
+              <div class="text-xs font-bold text-white">KH. Agus Salim Yahdi & Kiai Nur Hasan</div>
             </div>
           </div>
         </div>
