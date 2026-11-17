@@ -5,11 +5,13 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
 const {
   title = `PSB PPBH 2027/2028 | Penerimaan Santri & Siswa Baru Bidayatul Hidayah Mojogeneng`,
-  description = `Portal Pendaftaran Terpadu Single Gateway TP. 2027/2028 Yayasan Pondok Pesantren Bidayatul Hidayah Mojogeneng Jatirejo Mojokerto. 14 Komplek Asrama & 5 Lembaga Formal.`
+  description = `Portal Pendaftaran Terpadu Single Gateway TP. 2027/2028 Yayasan Pondok Pesantren Bidayatul Hidayah Mojogeneng Jatirejo Mojokerto. 14 Komplek Asrama & 5 Lembaga Formal.`,
+  image = `https://psb-ppbh-com.pages.dev/logo-ppbh.png`
 } = Astro.props;
 ---
 
@@ -22,12 +24,35 @@ const {
     <meta name="description" content={description} />
     <meta name="keywords" content="PSB PPBH, Pendaftaran Santri Baru 2027, Bidayatul Hidayah Mojogeneng, Pesantren Mojokerto, SMK Bidayatul Hidayah DKV, MTs Salafiyah Mojogeneng, MA Bidayatul Hidayah" />
 
+    <!-- Open Graph / WhatsApp Link Preview Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://psb-ppbh-com.pages.dev" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:secure_url" content={image} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:alt" content="Logo Official Yayasan Pondok Pesantren Bidayatul Hidayah Mojogeneng" />
+    <meta property="og:site_name" content="PSB PPBH Mojogeneng" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://psb-ppbh-com.pages.dev" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Favicon & Apple Touch Icon -->
+    <link rel="icon" type="image/png" href="/logo-ppbh.png" />
+    <link rel="apple-touch-icon" href="/logo-ppbh.png" />
+
     <!-- Google Fonts: Plus Jakarta Sans, Amiri, and Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="theme-color" content="#0F4C3A" />
   </head>
   <body class="font-sans bg-light-bg text-slate-800 antialiased selection:bg-emerald-900 selection:text-gold-300">
